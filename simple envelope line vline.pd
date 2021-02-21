@@ -1,0 +1,45 @@
+#N canvas -8 -8 1920 1037 12;
+#X obj 131 187 osc~;
+#X obj 131 250 *~;
+#X obj 124 418 dac~;
+#X msg 207 182 0 200;
+#X msg 269 182 0.2 500;
+#X obj 209 227 vline~;
+#X obj 131 153 vline~;
+#X obj 295 73 bng 15 250 50 0 empty empty start 17 7 0 10 -262144 -1
+-1;
+#X msg 130 118 440 0 0 \, 500 10000 0;
+#X obj 457 215 osc~;
+#X obj 492 309 *~;
+#X obj 457 184 vline~;
+#X msg 514 183 0 200;
+#X msg 561 184 0.2 500;
+#X obj 507 217 vline~;
+#X msg 455 141 440 0 0 \, 400 10000 0;
+#X obj 410 75 bng 15 250 50 0 empty empty off 17 7 0 10 -262144 -1
+-1;
+#X obj 359 73 bng 15 250 50 0 empty empty on 17 7 0 10 -262144 -1 -1
+;
+#X text 140 135 freq time delay \, freq time delay;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 1;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 7 0 15 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 10 0 2 1;
+#X connect 11 0 9 0;
+#X connect 12 0 14 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 1;
+#X connect 15 0 11 0;
+#X connect 16 0 3 0;
+#X connect 16 0 12 0;
+#X connect 17 0 13 0;
+#X connect 17 0 4 0;

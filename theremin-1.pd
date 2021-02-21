@@ -1,0 +1,58 @@
+#N canvas -8 -8 1920 1037 12;
+#X obj 336 247 osc~;
+#X obj 338 49 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 376 184 hsl 200 15 0 0.9 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 334 198 5 0 0 0 - - -;
+#X floatatom 378 213 5 0 0 0 - - -;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array \$0_tab 100 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 374 39 graph;
+#X obj 191 301 tabwrite~ \$0_tab;
+#X obj 187 242 metro 200;
+#X obj 192 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 190 216 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 338 275 *~;
+#X obj 336 349 *~ 0.5;
+#X obj 337 410 dac~;
+#X obj 522 290 vline~;
+#X obj 526 256 \$1 20;
+#X obj 144 35 receive fromGUI;
+#X obj 144 59 route list;
+#X obj 144 83 route /myXYSlider;
+#X floatatom 141 146 5 0 0 0 - - -;
+#X floatatom 204 144 5 0 0 0 - - -;
+#X obj 142 118 unpack 0 0;
+#X obj 334 222 mtof;
+#X obj 272 122 * 127;
+#X connect 0 0 10 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 21 0;
+#X connect 4 0 14 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 7 0;
+#X connect 10 0 6 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 10 1;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 20 0;
+#X connect 18 0 2 0;
+#X connect 19 0 22 0;
+#X connect 20 0 18 0;
+#X connect 20 1 19 0;
+#X connect 21 0 0 0;
+#X connect 22 0 1 0;

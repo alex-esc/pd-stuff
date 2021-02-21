@@ -1,0 +1,16 @@
+#N canvas -1927 0 958 1028 12;
+#X obj 50 77 poly 64;
+#X obj 52 31 notein;
+#X obj 46 140 pack 0 0 0;
+#X obj 46 109 - 1;
+#X obj 45 273 dac~;
+#X obj 46 197 clone synth-en-1 64;
+#X connect 0 0 3 0;
+#X connect 0 1 2 1;
+#X connect 0 2 2 2;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 5 0 4 0;
+#X connect 5 0 4 1;
