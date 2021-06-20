@@ -56,6 +56,77 @@ Metro ->  Matrix -> kit selector -> Drum  synth ->  GUI (BPM knobs) -> speakers 
 																							
 ```
 
+The pattern table consists of a sub patch with 32 binary outputs that are fed into the 32 step matrix, the matrix itself has 96 inputs, 32 per step per drum kit (Kick, snare and hi hat). The patterns are stored by a hardwired connection between the steps and the pattern output. Therefore certain presets action it's given position on the step matrix.
+
+The patterns included internally are not the patterns themselves but a combination of generic building blocks. One sub pattern is the "erase everything on the 32 steps", this sets all the steps to zero. Another sub pattern is the "Kick on the up beat", other examples include "snare or 3" or "hi hats on odd" and "hats on even". These sub patterns are connected to first trigger the "erase everything on the 32 steps" sub pattern before triggering the desired kick and snare sub pattern.
+
+```
+pattern table input -> sub patterns -> full patterns -> pattern applier
+      A                                    V
+      |                                    |
+      +----<Erase previous pattern<--------+
+```
+
+Finally the drum synth, the section that makes the sounds when they are triggered by the metronome, works by applying and amplitude envelope to an always running synthesizer and applying some modulation or noise. This general process applies to all the drum synth engines, the 3 currently implemented synths are basic, modern and complex.
+
+More specifically each synths works as follows:
+
+**SIMPLE KICK**
+
+```
+Drum synth kick input -> Sound oscillator -> Amp and pitch envelope -> Sound output
+
+```
+
+**SIMPLE SNARE**
+
+```
+Drum synth snare input -> Noise oscillator -> high + low pass filters -> Amp envelope -> Sound output
+
+```
+
+**SIMPLE, MODERN AND COMPLEX HI-HATS**
+
+All the drum synths trigger the same hi-hat engine for now.
+
+```
+Drum synth hi-hat input -> Noise oscillator -> narrow band pass filter -> Amp envelope -> Sound output
+```
+
+**MODERN KICK**
+
+```
+Drum synth kick input + knob settings -> low freq phasor oscillator -> Amp envelope -> amplitude modulated and band-passed noise synth -> pitch modulation -> Sound output
+```
+
+The knob settings values are fed into the oscillators and envelopes to modify the timbre of the MODERN kick. This same architecture is used for all synths from here onward:
+
+**MODERN SNARE**
+
+The snare has a similar architecture to the kick  however the internal values are set differently to focus the noise of the output instead of the pitch modulated thump.
+
+```
+Drum synth snare input + knob settings -> hi freq sound oscillator -> Amp envelope -> amplitude modulated and band-passed noise synth -> pitch modulation -> Sound output
+```
+This time the sound oscillator is lowered in volume and creates a hi pitched sound to emulate the pitch of a tuned snare drum. The pitch is way lower in volume than the noise oscillator.
+
+The amp and pitch modulation applied on the noise part of the snare is not only higher in volume but it has a longer decay to emulate gated reverb.
+
+**COMPLEX DRUM SYTHS**
+
+The theory behind the complex drum synths are beyond the scope of this document. Please refer to the original myMembrene patch or the author of the synth engine: [Mike Moreno](https://mikemorenodsp.github.io/about/).
+
+**BLEND MODE**
+
+The blend mode simply takes the input from the 32 step matrix and uses it to trigger all engines at once, but feeds them into a volume control section:
+
+```
+                      +--> Simple engine----> Independent volume knob --+
+                      |                                                 |
+Drum is triggered ----+--> Modern engine----> Independent volume knob --+---> Master Volume--> Sound output
+                      |                                                 |
+                      +--> Complex engine---> Independent volume knob --+
+```
 
 
 
