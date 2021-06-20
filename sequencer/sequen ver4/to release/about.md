@@ -8,6 +8,7 @@ I am more than happy to make a custom drum machine or electronic instrument for 
 
 I love helping musicians realize their ideas trough technology. I offer mixing services, music production services and one-on-one production workshops, I can build you a custom instrument for a flat fee or offer music programming tutoring or a music programming workshop and or conference. If you're interested in any of these services please reach out via my email: alexesc at disroot dot org.
 
+
 ## The inner workings of BONFIRE
 
 BONFIRE is build on pure data and MobMuPLat, a visual programming environment for music and smartphone music apps. The project's design goes as follows:
@@ -194,6 +195,20 @@ Metronome -> 32 step Matrix -> kit selector -> Drum  synth -> Audio FX module ->
                                                                   +---------<----------+
 ```
 Of course the parameters being set on the GUI are fed back int the audio module.
+
+
+## Credits, thank you's and acknowledgments
+
+I'd like to thank my friends, family and every person that provided me with care and company during the development of BONFIRE, since it took place as the 2020 pandemic lock-down started. These times were very strange and hard hitting, thank you for helping me getting through, I'm talking about..... well you know who you are, thanks buds :)
+
+This project would also not been possible without the technical inspiration and direct works from several people, including:
+
+* Miller Puckette, the author of Pure Data, the software on top of the BONFIRE engine runs on. Puckette not only writes great software, but is also responsible of great inspiration for me. Watching his lectures and talks provide not only with great technical know-how but with a philosophy of art and instrument design that is truly unique and inspiring.
+* Daniel Iglesia, the developer of MobMuPlat, the app that handles importing pd patches into a mobile environment. Without MobMuPlat BONFIRE would not have been possible.
+* Sam Aaron, the developer behind Sonic Pi, a live programming environment for music sequencing and synthesis. The initial prototype for what would later become BONFIRE started on sonic pi. Not only that, but his love for music, programming and pedagogy are outright infectious. I personally can't help reading Sam's posts on the sonic pi forum or listen to a sonic pi performance by him or one of his conferences without stooping the video mid way to rush to sonic pi and get programming. Sam is responsible for making music programming so much more fun, accessible and outright addictive. Thanks for everything you do for the community.
+* Mike Moreno, for writing and publishing "pd-mkmr", a pure data library  that contains "myMembrane" - the engine behind the Complex kit sound. Above writing myMenbrane Mike is also source of great inspiration for me. His work with pd is so advanced and yet simple in such a way that just leaves me in awe. When I'm stuck on pure data I just browse Mike's pd patches looking for inspiration and solutions and his work never seems to disappoint.
+* Andrew brown from YouTube, Brown's tutorials on pure data are one of the most practical and effective out there. I really enjoy his teaching style and his tutorials were crucially in the making of BONFIRE,e specially the simple drum synth, since it's taken directly from Brown's tutorials.
+* Soxsa, from the Sonic pi forum. Finally I'd like to thank soxsa for seeing something of value on my prototype sequencer. Frankly I think I would not have perused this project in particular were not for the initial interest of soxsa. Thank you for expressing your excitement for my sonic pi drum machine since it sparked my hunger to develop my drum machine more and more. Thank you for caring!
 
 
 
