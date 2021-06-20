@@ -42,7 +42,18 @@ Metro ->  Matrix -> kit selector -> Drum  synth ->  GUI (BPM knobs) -> speakers
 The pattern selector also works by taking input from the MObMuPLat GUI and feeding it back to a pattern selector with hard coded patterns, internally the selector works like this:
 
 ```
-
+up down buttons -> internal counter -> pattern table -> pattern applier -> 32 step matrix --+
+  A                                                                                         |
+  |                                                                                         |
+  +---------<----<-----<-------<--------<------<-----+                                      |
+                                                     |                                      |
+                                                     |                                      V
+                                                     A                                      |
+Metro ->  Matrix -> kit selector -> Drum  synth ->  GUI (BPM knobs) -> speakers             |
+              A                                                                             |
+              |                                                                             |
+              +----------<------------------<-----------------------------<-----------------+
+																							
 ```
 
 
