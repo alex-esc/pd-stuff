@@ -67,6 +67,23 @@ pattern table input -> sub patterns -> full patterns -> pattern applier
       +----<Erase previous pattern<--------+
 ```
 
+The pattern sector also outputs text that represents the name of the currently selected full pattern. This is taken as the input of the phone GUI:
+
+```
+up down buttons -> internal counter -> pattern table -> pattern applier -> 32 step matrix --+
+                                            V                                               |
+                                            |                                               |
+                                            +--string---+                                   |
+                                                        |                                   |
+                                                        |                                   V
+                                                        V                                   |
+Metro ->  Matrix -> kit selector -> Drum  synth ->  GUI (Pattern display)                   |
+              A                                                                             |
+              |                                                                             |
+              +----------<------------------<-----------------------------<-----------------+
+																							
+```
+
 Finally the drum synth, the section that makes the sounds when they are triggered by the metronome, works by applying and amplitude envelope to an always running synthesizer and applying some modulation or noise. This general process applies to all the drum synth engines, the 3 currently implemented synths are basic, modern and complex.
 
 More specifically each synths works as follows:
@@ -127,6 +144,56 @@ Drum is triggered ----+--> Modern engine----> Independent volume knob --+---> Ma
                       |                                                 |
                       +--> Complex engine---> Independent volume knob --+
 ```
+
+The drum kit selector functions like the blend mode, but instead of sending audio signals to drum synths, it sends triggers to the engines that are gated off depending on the status of what kit is selected, this process occurs in parallel:
+
+```
+
+Drum kit selector -> Number between 1 and 4 -> close all gates, then open Nth gate
+
+
+
+                        +--> Gate 1---> Simple engine---+
+                        |                               |                    
+Drums are triggered ----+--> Gate 2---> Modern engine---+--> Sound output
+                        |                               |                 
+                        +--> Gate 3---> Complex engine--+
+                        |                               | 
+                        +--> Gate 4---> Blend engine----+
+```
+
+Future additions to BONFIRE like a sampler of audio effects will be implemented in parallel of the current implementation.
+
+For example, the sampler will simply be another "drum synth" parallel to all other synths. The audio effects will run from the GUI to a module just before the sound output.
+
+**SAMPLER**
+
+```
+
+Drum kit selector -> Number between 1 and 5 -> close all gates, then open Nth gate
+
+
+
+                        +--> Gate 1---> Simple engine---+
+                        |                               |                    
+Drums are triggered ----+--> Gate 2---> Modern engine---+--> Sound output
+                        |                               |                 
+                        +--> Gate 3---> Complex engine--+
+                        |                               | 
+                        +--> Gate 4---> Blend engine----+
+                        |                               | 
+                        +--> Gate 5---> Sampler---------+
+```
+
+**AUDIO EFFECTS**
+
+```
+Metronome -> 32 step Matrix -> kit selector -> Drum  synth -> Audio FX module -> MobMuPlat GUI -> Phone speakers
+                                                                  A                    V
+                                                                  |                    |
+                                                                  +---------<----------+
+```
+Of course the parameters being set on the GUI are fed back int the audio module.
 
 
 
