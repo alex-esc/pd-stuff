@@ -1,5 +1,9 @@
 # About the BONFIRE project
 
+## About the sequencer
+
+BONFIRE is a cross-platform drum machine designed to work best on a live and acoustic performance. Ideal to play around the campfire with a voice and a guitar. BONFIRE version alpha-1a was developed over a span of 6 months by alex-esc.
+
 ## About the author
 
 Hello, I am alex-esc, the maker of the BONFIRE drum machine. I am a young(-sh) music production and audio engineer student from Mexico, a hobbyist music programmer and an overall music and technology fan.
