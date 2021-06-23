@@ -437,7 +437,7 @@
 #X connect 157 0 156 0;
 #X coords 0 -1 1 1 140 80 2 100 100;
 #X restore 3 14 pd counter;
-#N canvas -8 -8 1920 1037 DrumkKits 0;
+#N canvas -8 -8 1920 1037 DrumkKits 1;
 #X obj 96 997 dac~;
 #X obj 112 131 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -2606,7 +2606,7 @@ sounds.;
 -1 -1;
 #X msg 699 -98 3;
 #X msg 699 -71 list setTimbreGUI \$1;
-#X obj 607 -459 loadbang;
+#X obj 628 -475 loadbang;
 #X obj 654 -240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 810 -132 b;
@@ -2637,7 +2637,10 @@ sounds.;
 #X msg 558 -365 3;
 #X msg 558 -338 list setTimbreGUI \$1;
 #X msg 721 -363 0;
-#X obj 575 -418 del 1;
+#X obj 628 -441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 709 -425 del 20;
+#X obj 575 -418 del 100;
 #X connect 1 0 163 0;
 #X connect 2 0 0 0;
 #X connect 2 0 0 1;
@@ -2819,7 +2822,6 @@ sounds.;
 #X connect 173 0 110 0;
 #X connect 176 0 177 0;
 #X connect 177 0 174 0;
-#X connect 178 0 204 0;
 #X connect 178 0 205 0;
 #X connect 179 0 183 0;
 #X connect 181 0 180 0;
@@ -2845,7 +2847,9 @@ sounds.;
 #X connect 202 0 203 0;
 #X connect 203 0 201 0;
 #X connect 204 0 200 0;
-#X connect 205 0 202 0;
+#X connect 205 0 204 0;
+#X connect 205 0 207 0;
+#X connect 207 0 202 0;
 #X coords 0 -1 1 1 280 100 2 100 100;
 #X restore 147 -6 pd DrumkKits;
 #N canvas -7 0 958 1028 shotcutKeys 0;
