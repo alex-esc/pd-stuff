@@ -437,7 +437,7 @@
 #X connect 157 0 156 0;
 #X coords 0 -1 1 1 140 80 2 100 100;
 #X restore 3 14 pd counter;
-#N canvas -8 -8 1920 1037 DrumkKits 1;
+#N canvas -8 -8 1920 1037 DrumkKits 0;
 #X obj 96 997 dac~;
 #X obj 112 131 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -542,10 +542,10 @@
 -1 -1;
 #N canvas -8 -8 1920 1037 DrumSelector 0;
 #X obj 177 97 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 3;
 #X floatatom 177 122 5 0 0 0 - - -;
 #X obj 58 256 spigot;
-#X obj 97 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 97 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 97 160 sel 0;
 #X msg 129 189 0;
@@ -562,7 +562,7 @@
 #X obj 403 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 208 346 spigot;
-#X obj 247 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 247 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 279 189 0;
 #X obj 247 160 sel 3;
@@ -629,10 +629,10 @@
 -1;
 #N canvas -8 -8 1920 1037 DrumSelector 0;
 #X obj 177 97 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 3;
 #X floatatom 177 122 5 0 0 0 - - -;
 #X obj 58 256 spigot;
-#X obj 97 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 97 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 97 160 sel 0;
 #X msg 129 189 0;
@@ -649,7 +649,7 @@
 #X obj 403 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 208 346 spigot;
-#X obj 247 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 247 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 279 189 0;
 #X obj 247 160 sel 3;
@@ -708,10 +708,10 @@
 #X restore 112 612 pd DrumSelector;
 #N canvas -8 -8 1920 1037 DrumSelector 0;
 #X obj 177 97 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 3;
 #X floatatom 177 122 5 0 0 0 - - -;
 #X obj 58 256 spigot;
-#X obj 97 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 97 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 97 160 sel 0;
 #X msg 129 189 0;
@@ -728,7 +728,7 @@
 #X obj 403 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 208 346 spigot;
-#X obj 247 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 247 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 279 189 0;
 #X obj 247 160 sel 3;
@@ -2532,7 +2532,7 @@ sounds.;
 1;
 #X text 424 870 Tester section;
 #X obj 280 129 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 3;
 #X text 295 127 Basic;
 #X text 295 142 Modern;
 #X text 295 172 Blend;
@@ -2606,7 +2606,7 @@ sounds.;
 -1 -1;
 #X msg 699 -98 3;
 #X msg 699 -71 list setTimbreGUI \$1;
-#X obj 628 -475 loadbang;
+#X obj 624 -509 loadbang;
 #X obj 654 -240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 810 -132 b;
@@ -2641,6 +2641,7 @@ sounds.;
 -1 -1;
 #X obj 709 -425 del 20;
 #X obj 575 -418 del 100;
+#X obj 549 -463 del 300;
 #X connect 1 0 163 0;
 #X connect 2 0 0 0;
 #X connect 2 0 0 1;
@@ -2822,7 +2823,7 @@ sounds.;
 #X connect 173 0 110 0;
 #X connect 176 0 177 0;
 #X connect 177 0 174 0;
-#X connect 178 0 205 0;
+#X connect 178 0 208 0;
 #X connect 179 0 183 0;
 #X connect 181 0 180 0;
 #X connect 182 0 180 0;
@@ -2850,6 +2851,7 @@ sounds.;
 #X connect 205 0 204 0;
 #X connect 205 0 207 0;
 #X connect 207 0 202 0;
+#X connect 208 0 205 0;
 #X coords 0 -1 1 1 280 100 2 100 100;
 #X restore 147 -6 pd DrumkKits;
 #N canvas -7 0 958 1028 shotcutKeys 0;
