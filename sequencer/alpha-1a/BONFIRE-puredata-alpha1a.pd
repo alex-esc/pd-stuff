@@ -1,4 +1,4 @@
-#N canvas 953 0 958 1028 12;
+#N canvas -8 -8 1920 1037 12;
 #N canvas 952 -8 960 1037 counter 0;
 #X msg 478 102 tempo \$1 permin;
 #X obj 370 212 f;
@@ -962,7 +962,7 @@
 #X obj 384 331 osc~;
 #X obj 377 288 *~ 0.75;
 #X obj 498 73 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 24892 1;
 #X obj 495 52 f;
 #X text 523 51 volume;
 #X obj 22 30 unpack f f, f 68;
@@ -1101,7 +1101,7 @@
 -1;
 #X floatatom 217 150 10 0 1 0 - MedSnare_tone_volume -;
 #X obj 596 180 vsl 15 30 0 0.98 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5800 1;
 #X floatatom 511 147 10 0 0.98 0 - - -;
 #X obj 547 250 f;
 #X text 426 124 Noise Filtr;
@@ -1176,7 +1176,7 @@
 #X obj 139 72 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 162 72 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9604 1;
 #X text 28 352 Simple and Medium hhats are the same for now;
 #X obj 124 46 unpack f f, f 14;
 #X connect 0 0 17 0;
@@ -1550,7 +1550,7 @@ sounds.;
 #X obj 139 72 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 162 72 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9604 1;
 #X text 28 352 Simple and Complex hhats are the same for now;
 #X obj 124 46 unpack f f, f 14;
 #X connect 0 0 17 0;
@@ -1697,7 +1697,7 @@ sounds.;
 #X obj 435 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 458 168 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9604 1;
 #X obj 420 99 inlet;
 #X obj 420 142 unpack f f, f 14;
 #X connect 0 0 1 0;
@@ -1735,7 +1735,7 @@ sounds.;
 #X obj 139 72 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 162 72 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9604 1;
 #X obj 124 46 unpack f f, f 14;
 #X connect 0 0 16 0;
 #X connect 1 0 2 0;
@@ -1835,7 +1835,7 @@ sounds.;
 #X obj 384 331 osc~;
 #X obj 377 288 *~ 0.75;
 #X obj 498 73 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 24892 1;
 #X obj 495 52 f;
 #X text 523 51 volume;
 #X obj 22 30 unpack f f, f 68;
@@ -1974,7 +1974,7 @@ sounds.;
 -1;
 #X floatatom 217 150 10 0 1 0 - MedSnare_tone_volume -;
 #X obj 596 180 vsl 15 30 0 0.98 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5800 1;
 #X floatatom 511 147 10 0 0.98 0 - - -;
 #X obj 547 250 f;
 #X text 426 124 Noise Filtr;
@@ -2049,7 +2049,7 @@ sounds.;
 #X obj 139 72 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 162 72 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9604 1;
 #X text 28 352 Simple and Medium hhats are the same for now;
 #X obj 124 46 unpack f f, f 14;
 #X connect 0 0 17 0;
@@ -2361,7 +2361,7 @@ sounds.;
 #X obj 139 72 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 162 72 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9604 1;
 #X text 28 352 Simple and Complex hhats are the same for now;
 #X obj 124 46 unpack f f, f 14;
 #X connect 0 0 17 0;
@@ -2606,14 +2606,13 @@ sounds.;
 -1 -1;
 #X msg 699 -98 3;
 #X msg 699 -71 list setTimbreGUI \$1;
-#X obj 699 -257 loadbang;
+#X obj 711 -288 loadbang;
 #X obj 654 -240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 810 -132 b;
 #X obj 841 -164 b;
 #X obj 810 -190 b;
 #X obj 810 -231 b;
-#X obj 841 -189 del 2;
 #X msg 654 228 0;
 #X obj 646 19 loadbang;
 #X obj 653 156 b;
@@ -2631,6 +2630,8 @@ sounds.;
 #X msg 884 51 1;
 #X obj 808 -7 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 640 -183 del 3;
+#X obj 841 -189 del 5;
 #X connect 1 0 163 0;
 #X connect 2 0 0 0;
 #X connect 2 0 0 1;
@@ -2809,30 +2810,32 @@ sounds.;
 #X connect 170 0 171 0;
 #X connect 171 0 172 0;
 #X connect 172 0 173 0;
-#X connect 173 0 193 0;
+#X connect 173 0 192 0;
 #X connect 176 0 177 0;
 #X connect 177 0 174 0;
-#X connect 178 0 176 0;
+#X connect 178 0 179 0;
+#X connect 179 0 183 0;
+#X connect 180 0 176 0;
 #X connect 181 0 180 0;
 #X connect 182 0 180 0;
 #X connect 183 0 182 0;
-#X connect 183 0 184 0;
-#X connect 184 0 181 0;
-#X connect 185 0 110 0;
-#X connect 186 0 190 0;
-#X connect 187 0 185 0;
-#X connect 188 0 187 0;
-#X connect 189 0 187 0;
-#X connect 190 0 189 0;
-#X connect 190 0 191 0;
-#X connect 191 0 188 0;
-#X connect 192 0 190 0;
-#X connect 193 0 110 0;
-#X connect 194 0 193 1;
+#X connect 183 0 199 0;
+#X connect 184 0 110 0;
+#X connect 185 0 189 0;
+#X connect 186 0 184 0;
+#X connect 187 0 186 0;
+#X connect 188 0 186 0;
+#X connect 189 0 188 0;
+#X connect 189 0 190 0;
+#X connect 190 0 187 0;
+#X connect 191 0 189 0;
+#X connect 192 0 110 0;
+#X connect 193 0 192 1;
+#X connect 194 0 195 0;
 #X connect 195 0 196 0;
-#X connect 196 0 197 0;
-#X connect 197 0 194 0;
-#X connect 198 0 196 0;
+#X connect 196 0 193 0;
+#X connect 197 0 195 0;
+#X connect 199 0 181 0;
 #X coords 0 -1 1 1 280 100 2 100 100;
 #X restore 147 -6 pd DrumkKits;
 #N canvas -7 0 958 1028 shotcutKeys 0;
