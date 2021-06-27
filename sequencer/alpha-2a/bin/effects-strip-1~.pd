@@ -1,0 +1,16 @@
+#N canvas -8 -8 1920 1037 12;
+#X obj 31 20 inlet~;
+#X obj 31 575 outlet~;
+#X obj 31 58 bin/delay-module~;
+#X obj 31 174 bin/chorus-module~;
+#X text 137 39 Delay;
+#X text 81 153 Chorus-phaser;
+#X obj 31 287 bin/dist-crush-module~;
+#X text 123 269 Distort;
+#X obj 31 424 bin/reverb-module-1~;
+#X text 130 406 Reverb;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 6 0 8 0;
+#X connect 8 0 1 0;
