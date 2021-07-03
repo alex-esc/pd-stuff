@@ -1,6 +1,6 @@
 #N canvas -8 -8 1920 1037 12;
 #X obj 36 -347 hsl 900 20 48 84 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 60564 1;
+-1 -1 34488 1;
 #X obj 33 171 *~ 0.3;
 #X obj 33 -206 mtof;
 #X obj 126 286 rev3~, f 27;
@@ -12,7 +12,7 @@
 #X floatatom 267 234 5 0 0 0 - - -;
 #X obj 33 321 clip~ -1 1;
 #X obj 149 -137 vsl 50 20 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3496 0;
+-1 -1 3342 0;
 #X obj 33 -9 *~, f 17;
 #X obj 149 -82 vline~;
 #X obj 33 -420 cnv 15 42 60 empty empty empty 20 12 0 14 -233017 -66577
@@ -94,14 +94,14 @@
 #X obj 577 -76 vline~;
 #X obj 442 -147 sel 1 0, f 16;
 #X obj 533 -199 hsl 50 15 0 3000 0 0 empty empty attack -2 -8 0 10
--262144 -1 -1 980 1;
+-262144 -1 -1 446 1;
 #X obj 620 -199 hsl 50 15 0 3000 0 0 empty empty decay -2 -8 0 10 -262144
--1 -1 1634 1;
+-1 -1 9800 1;
 #X obj 725 -271 loadbang;
 #X msg 754 -218 500;
 #X msg 695 -218 300;
-#X msg 530 -109 1 300;
-#X msg 617 -109 0 500;
+#X msg 530 -109 1 136.672;
+#X msg 617 -109 0 3000;
 #X msg 530 -174 set 1 \$1;
 #X msg 617 -174 set 0 \$1;
 #X obj 442 -271 route /soundBtn /attackKnob /decayKnob;
@@ -510,14 +510,14 @@
 #X text 26 285 octave -;
 #X obj 273 149 sel 0 1 2, f 39;
 #X obj 273 109 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
-#X obj 273 267 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+-1 -1 1;
+#X obj 273 267 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 273 241 1;
 #X obj 307 241 del 1;
 #X msg 307 265 0;
 #X obj 273 217 b;
-#X obj 363 267 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 363 267 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 363 241 1;
 #X obj 397 241 del 1;
@@ -529,9 +529,9 @@
 #X obj 487 241 del 1;
 #X msg 487 265 0;
 #X obj 453 217 b;
-#X obj 273 297 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 273 297 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 363 297 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 363 297 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 453 297 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -613,6 +613,10 @@
 #X obj 416 -236 route /droneTgl;
 #X floatatom 416 -212 5 0 0 0 - - -;
 #X msg 47 -120 60;
+#X obj 581 3 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 636 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 119 0;
 #X connect 1 0 3 0;
 #X connect 1 0 3 1;
@@ -637,7 +641,9 @@
 #X connect 53 0 124 0;
 #X connect 54 0 51 1;
 #X connect 55 0 61 0;
+#X connect 55 0 127 0;
 #X connect 55 1 62 0;
+#X connect 55 1 128 0;
 #X connect 56 0 63 0;
 #X connect 57 0 64 0;
 #X connect 58 0 59 0;
