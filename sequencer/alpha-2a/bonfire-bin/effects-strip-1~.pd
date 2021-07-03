@@ -5,6 +5,7 @@
 #X text 150 214 Chorus-phaser;
 #X text 192 330 Distort;
 #X text 199 467 Reverb;
+#X obj 100 119 delay-module~;
 #X obj 100 235 chorus-module~;
 #X text 311 119 First inlet passes audio;
 #X text 310 243 The last inlet resets all values;
@@ -15,10 +16,9 @@
 inlet conroll knobs;
 #X obj 100 348 dist-crush-module~;
 #X obj 100 485 reverb-module-1~;
-#X obj 100 119 delay-module~;
-#X connect 0 0 14 0;
-#X connect 6 0 12 0;
-#X connect 12 0 13 0;
-#X connect 13 0 1 0;
-#X connect 14 0 6 0;
+#X connect 0 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 0;
 #X coords 0 -1 1 1 145 520 2 100 100;
