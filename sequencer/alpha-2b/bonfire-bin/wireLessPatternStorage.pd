@@ -1,9 +1,9 @@
 #N canvas -8 -8 1920 1037 12;
-#X obj 12 28 inlet;
-#X obj 11 81 outlet;
-#X msg 516 63 \; clear_pattern_w bang:;
-#X msg 516 99 \; fill_pattern_w bang:;
-#N canvas -8 -8 1920 1037 clear-fill-pat 1;
+#X obj 34 35 inlet;
+#X obj 33 88 outlet;
+#X msg 538 70 \; clear_pattern_w bang:;
+#X msg 538 106 \; fill_pattern_w bang:;
+#N canvas -8 -8 1920 1037 clear-fill-pat 0;
 #X msg 98 188 \; pattern_kick_1 0 \; pattern_kick_2 0 \; pattern_kick_3
 0 \; pattern_kick_4 0 \; pattern_kick_5 0 \; pattern_kick_6 0 \; pattern_kick_7
 0 \; pattern_kick_8 0 \; pattern_kick_9 0 \; pattern_kick_10 0 \; pattern_kick_11
@@ -76,25 +76,16 @@ pattern_snare_27 1 \; pattern_snare_28 1 \; pattern_snare_29 1 \; pattern_snare_
 #X obj -147 711 send toGUI;
 #X msg -2 769 list /k1 0;
 #X msg 94 769 list /k1 1;
-#X msg -216 214 list /k1 0 \, /k2 0 \, /k3 0 \, /k4 0 \, /k5 0 \, /k6
+#X msg -408 318 list /k1 0 \, /k2 0 \, /k3 0 \, /k4 0 \, /k5 0 \, /k6
 0 \, /k7 0 \, /k8 0 \, /k9 0 \, /k10 0 \, /k11 0 \, /k12 0 \, /k13
 0 \, /k14 0 \, /k15 0 \, /k16 0 \, /kk1 0 \, /kk2 0 \, /kk3 0 \, /kk4
 0 \, /kk5 0 \, /kk6 0 \, /kk7 0 \, /kk8 0 \, /kk9 0 \, /kk10 0 \, /kk11
 0 \, /kk12 0 \, /kk13 0 \, /kk14 0 \, /kk15 0 \, /kk16 0;
-#X msg -88 216 list /k1 1 \, /k2 1 \, /k3 1 \, /k4 1 \, /k5 1 \, /k6
+#X msg -383 202 list /k1 1 \, /k2 1 \, /k3 1 \, /k4 1 \, /k5 1 \, /k6
 1 \, /k7 1 \, /k8 1 \, /k9 1 \, /k10 1 \, /k11 1 \, /k12 1 \, /k13
 1 \, /k14 1 \, /k15 1 \, /k16 1 \, /kk1 1 \, /kk2 1 \, /kk3 1 \, /kk4
 1 \, /kk5 1 \, /kk6 1 \, /kk7 1 \, /kk8 1 \, /kk9 1 \, /kk11 1 \, /kk11
 1 \, /kk12 1 \, /kk13 1 \, /kk14 1 \, /kk15 1 \, /kk16 1;
-#X msg -81 869 1 1 1;
-#X msg -10 870 0 0 0;
-#X obj -157 961 print;
-#X obj -143 1047 print;
-#X msg -18 925 k1 \$1 \, k2 \$2 \, k3 \$3;
-#X msg -98 1018 patterm_kick_1 \$1 \, patterm_kick_2 \$2 \, patterm_kick_3
-\$3;
-#X obj -26 977 send toGUI;
-#X text 127 874 AKI;
 #X connect 0 0 10 0;
 #X connect 7 0 0 0;
 #X connect 7 0 2 0;
@@ -106,14 +97,162 @@ pattern_snare_27 1 \; pattern_snare_28 1 \; pattern_snare_29 1 \; pattern_snare_
 #X connect 14 0 12 0;
 #X connect 15 0 12 0;
 #X connect 16 0 12 0;
-#X connect 17 0 21 0;
-#X connect 17 0 22 0;
-#X connect 18 0 21 0;
-#X connect 18 0 22 0;
-#X connect 21 0 19 0;
-#X connect 21 0 23 0;
-#X connect 22 0 20 0;
-#X restore 190 68 pd clear-fill-pat;
-#X text 113 34 The logic for clear and fill;
-#X text 148 49 patterns is stored here;
-#X text 514 42 Examples on calling clear and fill;
+#X restore 212 75 pd clear-fill-pat;
+#X text 135 41 The logic for clear and fill;
+#X text 170 56 patterns is stored here;
+#X text 536 49 Examples on calling clear and fill;
+#X msg 96 266 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0, f 65;
+#N canvas -8 -8 1920 1037 setPresetSysKick 0;
+#X obj 141 154 t a a;
+#X obj 173 274 send toGUI;
+#X msg 141 308 pattern_kick_1 \$1 \, pattern_kick_2 \$2 \, pattern_kick_3
+\$3 \, pattern_kick_4 \$4 \, pattern_kick_5 \$5 \, pattern_kick_6 \$6
+\, pattern_kick_7 \$7 \, pattern_kick_8 \$8 \, pattern_kick_9 \$9 \,
+pattern_kick_10 \$10 \, pattern_kick_11 \$11 \, pattern_kick_12 \$12
+\, pattern_kick_13 \$13 \, pattern_kick_14 \$14 \, pattern_kick_15
+\$15 \, pattern_kick_16 \$16 \, pattern_kick_17 \$17 \, pattern_kick_18
+\$18 \, pattern_kick_19 \$19 \, pattern_kick_20 \$20 \, pattern_kick_21
+\$21 \, pattern_kick_22 \$22 \, pattern_kick_23 \$23 \, pattern_kick_24
+\$24 \, pattern_kick_25 \$25 \, pattern_kick_26 \$26 \, pattern_kick_27
+\$27 \, pattern_kick_28 \$28 \, pattern_kick_29 \$29 \, pattern_kick_30
+\$30 \, pattern_kick_31 \$31 \, pattern_kick_32 \$32, f 66;
+#X obj 141 116 inlet;
+#X msg 173 181 k1 \$1 \, k2 \$2 \, k3 \$3 \, k4 \$4 \, k5 \$5 \, k6
+\$6 \, k7 \$7 \, k8 \$8 \, k9 \$9 \, k10 \$10 \, k11 \$11 \, k12 \$12
+\, k13 \$13 \, k14 \$14 \, k15 \$15 \, k16 \$16 \, kk1 \$17 \, kk2
+\$18 \, kk3 \$19 \, kk4 \$20 \, kk5 \$21 \, kk6 \$22 \, kk7 \$23 \,
+kk8 \$24 \, kk9 \$25 \, kk10 \$26 \, kk11 \$27 \, kk12 \$28 \, kk13
+\$29 \, kk14 \$30 \, kk15 \$31 \, kk16 \$32, f 64;
+#X connect 0 0 2 0;
+#X connect 0 1 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X restore 96 574 pd setPresetSysKick;
+#X msg 126 356 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0, f 65;
+#N canvas -8 -8 1920 1037 setPresetSysSnare 0;
+#X obj 141 154 t a a;
+#X obj 173 274 send toGUI;
+#X obj 141 116 inlet;
+#X msg 141 308 pattern_snare_1 \$1 \, pattern_snare_2 \$2 \, pattern_snare_3
+\$3 \, pattern_snare_4 \$4 \, pattern_snare_5 \$5 \, pattern_snare_6
+\$6 \, pattern_snare_7 \$7 \, pattern_snare_8 \$8 \, pattern_snare_9
+\$9 \, pattern_snare_10 \$10 \, pattern_snare_11 \$11 \, pattern_snare_12
+\$12 \, pattern_snare_13 \$13 \, pattern_snare_14 \$14 \, pattern_snare_15
+\$15 \, pattern_snare_16 \$16 \, pattern_snare_17 \$17 \, pattern_snare_18
+\$18 \, pattern_snare_19 \$19 \, pattern_snare_20 \$20 \, pattern_snare_21
+\$21 \, pattern_snare_22 \$22 \, pattern_snare_23 \$23 \, pattern_snare_24
+\$24 \, pattern_snare_25 \$25 \, pattern_snare_26 \$26 \, pattern_snare_27
+\$27 \, pattern_snare_28 \$28 \, pattern_snare_29 \$29 \, pattern_snare_30
+\$30 \, pattern_snare_31 \$31 \, pattern_snare_32 \$32, f 66;
+#X msg 173 181 s1 \$1 \, s2 \$2 \, s3 \$3 \, s4 \$4 \, s5 \$5 \, s6
+\$6 \, s7 \$7 \, s8 \$8 \, s9 \$9 \, s10 \$10 \, s11 \$11 \, s12 \$12
+\, s13 \$13 \, s14 \$14 \, s15 \$15 \, s16 \$16 \, ss1 \$17 \, ss2
+\$18 \, ss3 \$19 \, ss4 \$20 \, ss5 \$21 \, ss6 \$22 \, ss7 \$23 \,
+ss8 \$24 \, ss9 \$25 \, ss10 \$26 \, ss11 \$27 \, ss12 \$28 \, ss13
+\$29 \, ss14 \$30 \, ss15 \$31 \, ss16 \$32, f 64;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;
+#X restore 126 534 pd setPresetSysSnare;
+#X msg 146 444 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0, f 65;
+#N canvas -8 -8 1920 1037 setPresetSysHihat 0;
+#X obj 141 154 t a a;
+#X obj 173 274 send toGUI;
+#X obj 141 116 inlet;
+#X msg 141 308 pattern_hat_1 \$1 \, pattern_hat_2 \$2 \, pattern_hat_3
+\$3 \, pattern_hat_4 \$4 \, pattern_hat_5 \$5 \, pattern_hat_6 \$6
+\, pattern_hat_7 \$7 \, pattern_hat_8 \$8 \, pattern_hat_9 \$9 \, pattern_hat_10
+\$10 \, pattern_hat_11 \$11 \, pattern_hat_12 \$12 \, pattern_hat_13
+\$13 \, pattern_hat_14 \$14 \, pattern_hat_15 \$15 \, pattern_hat_16
+\$16 \, pattern_hat_17 \$17 \, pattern_hat_18 \$18 \, pattern_hat_19
+\$19 \, pattern_hat_20 \$20 \, pattern_hat_21 \$21 \, pattern_hat_22
+\$22 \, pattern_hat_23 \$23 \, pattern_hat_24 \$24 \, pattern_hat_25
+\$25 \, pattern_hat_26 \$26 \, pattern_hat_27 \$27 \, pattern_hat_28
+\$28 \, pattern_hat_29 \$29 \, pattern_hat_30 \$30 \, pattern_hat_31
+\$31 \, pattern_hat_32 \$32, f 66;
+#X msg 173 181 h1 \$1 \, h2 \$2 \, h3 \$3 \, h4 \$4 \, h5 \$5 \, h6
+\$6 \, h7 \$7 \, h8 \$8 \, h9 \$9 \, h10 \$10 \, h11 \$11 \, h12 \$12
+\, h13 \$13 \, h14 \$14 \, h15 \$15 \, h16 \$16 \, hh1 \$17 \, hh2
+\$18 \, hh3 \$19 \, hh4 \$20 \, hh5 \$21 \, hh6 \$22 \, hh7 \$23 \,
+hh8 \$24 \, hh9 \$25 \, hh10 \$26 \, hh11 \$27 \, hh12 \$28 \, hh13
+\$29 \, hh14 \$30 \, hh15 \$31 \, hh16 \$32, f 64;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;
+#X restore 146 494 pd setPresetSysHihat;
+#X msg 126 329 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1, f 65;
+#X msg 96 239 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1, f 65;
+#X msg 146 419 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1, f 65;
+#X obj 65 758 textfile;
+#X msg 65 714 read presets/test-preset.txt;
+#X msg 277 715 rewind;
+#X msg 65 781 set \$1, f 17;
+#X obj 66 631 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 65 653 t b b b b b b;
+#X obj 334 757 textfile;
+#X msg 334 713 read presets/test-preset.txt;
+#X msg 546 714 rewind;
+#X msg 334 780 set \$1, f 17;
+#X obj 335 630 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 334 652 t b b b b b b;
+#X msg 65 805 myPresetName;
+#X msg 334 804 80;
+#X obj 601 794 textfile;
+#X msg 602 713 read presets/test-preset.txt;
+#X msg 814 714 rewind;
+#X obj 603 630 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 602 652 t b b b b b b;
+#X obj 1283 1066 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 601 828 list prepend set;
+#X obj 601 851 list trim;
+#X msg 601 901 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1, f 68;
+#X msg 615 875 set;
+#X text 782 794 SIGUELE AKI;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 14 0 11 0;
+#X connect 15 0 9 0;
+#X connect 16 0 13 0;
+#X connect 17 0 20 0;
+#X connect 18 0 17 0;
+#X connect 19 0 17 0;
+#X connect 20 0 29 0;
+#X connect 21 0 22 0;
+#X connect 22 0 18 0;
+#X connect 22 1 17 0;
+#X connect 22 5 19 0;
+#X connect 23 0 26 0;
+#X connect 24 0 23 0;
+#X connect 25 0 23 0;
+#X connect 26 0 30 0;
+#X connect 27 0 28 0;
+#X connect 28 0 24 0;
+#X connect 28 1 23 0;
+#X connect 28 2 23 0;
+#X connect 28 5 25 0;
+#X connect 31 0 37 0;
+#X connect 32 0 31 0;
+#X connect 33 0 31 0;
+#X connect 34 0 35 0;
+#X connect 35 0 32 0;
+#X connect 35 1 31 0;
+#X connect 35 2 31 0;
+#X connect 35 3 31 0;
+#X connect 35 5 33 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 0;
+#X connect 40 0 39 0;
