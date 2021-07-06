@@ -3,8 +3,8 @@
 #X obj 33 88 outlet;
 #X msg 538 70 \; clear_pattern_w bang:;
 #X msg 538 106 \; fill_pattern_w bang:;
-#N canvas -8 -8 1920 1037 clear-fill-pat 0;
-#X msg 98 188 \; pattern_kick_1 0 \; pattern_kick_2 0 \; pattern_kick_3
+#N canvas -8 -8 1920 1037 clear-fill-pat 1;
+#X msg 181 254 \; pattern_kick_1 0 \; pattern_kick_2 0 \; pattern_kick_3
 0 \; pattern_kick_4 0 \; pattern_kick_5 0 \; pattern_kick_6 0 \; pattern_kick_7
 0 \; pattern_kick_8 0 \; pattern_kick_9 0 \; pattern_kick_10 0 \; pattern_kick_11
 0 \; pattern_kick_12 0 \; pattern_kick_13 0 \; pattern_kick_14 0 \;
@@ -14,7 +14,7 @@ pattern_kick_22 0 \; pattern_kick_23 0 \; pattern_kick_24 0 \; pattern_kick_25
 0 \; pattern_kick_26 0 \; pattern_kick_27 0 \; pattern_kick_28 0 \;
 pattern_kick_29 0 \; pattern_kick_30 0 \; pattern_kick_31 0 \; pattern_kick_32
 0 \;;
-#X msg 240 188 \; pattern_kick_1 1 \; pattern_kick_2 1 \; pattern_kick_3
+#X msg 884 260 \; pattern_kick_1 1 \; pattern_kick_2 1 \; pattern_kick_3
 1 \; pattern_kick_4 1 \; pattern_kick_5 1 \; pattern_kick_6 1 \; pattern_kick_7
 1 \; pattern_kick_8 1 \; pattern_kick_9 1 \; pattern_kick_10 1 \; pattern_kick_11
 1 \; pattern_kick_12 1 \; pattern_kick_13 1 \; pattern_kick_14 1 \;
@@ -24,7 +24,7 @@ pattern_kick_22 1 \; pattern_kick_23 1 \; pattern_kick_24 1 \; pattern_kick_25
 1 \; pattern_kick_26 1 \; pattern_kick_27 1 \; pattern_kick_28 1 \;
 pattern_kick_29 1 \; pattern_kick_30 1 \; pattern_kick_31 1 \; pattern_kick_32
 1 \;;
-#X msg 383 187 \; pattern_snare_1 0 \; pattern_snare_2 0 \; pattern_snare_3
+#X msg 323 255 \; pattern_snare_1 0 \; pattern_snare_2 0 \; pattern_snare_3
 0 \; pattern_snare_4 0 \; pattern_snare_5 0 \; pattern_snare_6 0 \;
 pattern_snare_7 0 \; pattern_snare_8 0 \; pattern_snare_9 0 \; pattern_snare_10
 0 \; pattern_snare_11 0 \; pattern_snare_12 0 \; pattern_snare_13 0
@@ -34,7 +34,7 @@ pattern_snare_17 0 \; pattern_snare_18 0 \; pattern_snare_19 0 \; pattern_snare_
 \; pattern_snare_24 0 \; pattern_snare_25 0 \; pattern_snare_26 0 \;
 pattern_snare_27 0 \; pattern_snare_28 0 \; pattern_snare_29 0 \; pattern_snare_30
 0 \; pattern_snare_31 0 \; pattern_snare_32 0 \;;
-#X msg 532 186 \; pattern_snare_1 1 \; pattern_snare_2 1 \; pattern_snare_3
+#X msg 1025 261 \; pattern_snare_1 1 \; pattern_snare_2 1 \; pattern_snare_3
 1 \; pattern_snare_4 1 \; pattern_snare_5 1 \; pattern_snare_6 1 \;
 pattern_snare_7 1 \; pattern_snare_8 1 \; pattern_snare_9 1 \; pattern_snare_10
 1 \; pattern_snare_11 1 \; pattern_snare_12 1 \; pattern_snare_13 1
@@ -44,7 +44,7 @@ pattern_snare_17 1 \; pattern_snare_18 1 \; pattern_snare_19 1 \; pattern_snare_
 \; pattern_snare_24 1 \; pattern_snare_25 1 \; pattern_snare_26 1 \;
 pattern_snare_27 1 \; pattern_snare_28 1 \; pattern_snare_29 1 \; pattern_snare_30
 1 \; pattern_snare_31 1 \; pattern_snare_32 1 \;;
-#X msg 682 186 \; pattern_hat_1 0 \; pattern_hat_2 0 \; pattern_hat_3
+#X msg 472 256 \; pattern_hat_1 0 \; pattern_hat_2 0 \; pattern_hat_3
 0 \; pattern_hat_4 0 \; pattern_hat_5 0 \; pattern_hat_6 0 \; pattern_hat_7
 0 \; pattern_hat_8 0 \; pattern_hat_9 0 \; pattern_hat_10 0 \; pattern_hat_11
 0 \; pattern_hat_12 0 \; pattern_hat_13 0 \; pattern_hat_14 0 \; pattern_hat_15
@@ -53,7 +53,7 @@ pattern_snare_27 1 \; pattern_snare_28 1 \; pattern_snare_29 1 \; pattern_snare_
 0 \; pattern_hat_24 0 \; pattern_hat_25 0 \; pattern_hat_26 0 \; pattern_hat_27
 0 \; pattern_hat_28 0 \; pattern_hat_29 0 \; pattern_hat_30 0 \; pattern_hat_31
 0 \; pattern_hat_32 0 \;;
-#X msg 818 185 \; pattern_hat_1 1 \; pattern_hat_2 1 \; pattern_hat_3
+#X msg 1176 261 \; pattern_hat_1 1 \; pattern_hat_2 1 \; pattern_hat_3
 1 \; pattern_hat_4 1 \; pattern_hat_5 1 \; pattern_hat_6 1 \; pattern_hat_7
 1 \; pattern_hat_8 1 \; pattern_hat_9 1 \; pattern_hat_10 1 \; pattern_hat_11
 1 \; pattern_hat_12 1 \; pattern_hat_13 1 \; pattern_hat_14 1 \; pattern_hat_15
@@ -62,41 +62,74 @@ pattern_snare_27 1 \; pattern_snare_28 1 \; pattern_snare_29 1 \; pattern_snare_
 1 \; pattern_hat_24 1 \; pattern_hat_25 1 \; pattern_hat_26 1 \; pattern_hat_27
 1 \; pattern_hat_28 1 \; pattern_hat_29 1 \; pattern_hat_30 1 \; pattern_hat_31
 1 \; pattern_hat_32 1 \;;
-#X text 95 159 All on all of preset test;
-#X obj 327 103 bng 15 250 50 0 empty clear_pattern_w clear_pattern_w
+#X obj 483 163 bng 15 250 50 0 empty clear_pattern_w clear_pattern_w
 17 7 0 10 -262144 -1 -1;
-#X obj 323 142 bng 15 250 50 0 empty fill_pattern_w fill_pattern_w
+#X obj 1192 145 bng 15 250 50 0 empty fill_pattern_w fill_pattern_w
 17 7 0 10 -262144 -1 -1;
-#X obj 90 1395 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 173 1461 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 108 702 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 323 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -420 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1025 205 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -147 711 send toGUI;
-#X msg -2 769 list /k1 0;
-#X msg 94 769 list /k1 1;
-#X msg -408 318 list /k1 0 \, /k2 0 \, /k3 0 \, /k4 0 \, /k5 0 \, /k6
+#X obj 689 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1396 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 689 739 send toGUI;
+#X obj 1396 741 send toGUI;
+#X msg 1321 261 list /k1 1 \, /k2 1 \, /k3 1 \, /k4 1 \, /k5 1 \, /k6
+1 \, /k7 1 \, /k8 1 \, /k9 1 \, /k10 1 \, /k11 1 \, /k12 1 \, /k13
+1 \, /k14 1 \, /k15 1 \, /k16 1 \, /kk1 1 \, /kk2 1 \, /kk3 1 \, /kk4
+1 \, /kk5 1 \, /kk6 1 \, /kk7 1 \, /kk8 1 \, /kk9 1 \, /kk10 1 \, /kk11
+1 \, /kk12 1 \, /kk13 1 \, /kk14 1 \, /kk15 1 \, /kk16 1, f 8;
+#X msg 1396 260 list /s1 1 \, /s2 1 \, /s3 1 \, /s4 1 \, /s5 1 \, /s6
+1 \, /s7 1 \, /s8 1 \, /s9 1 \, /s10 1 \, /s11 1 \, /s12 1 \, /s13
+1 \, /s14 1 \, /s15 1 \, /s16 1 \, /ss1 1 \, /ss2 1 \, /ss3 1 \, /ss4
+1 \, /ss5 1 \, /ss6 1 \, /ss7 1 \, /ss8 1 \, /ss9 1 \, /ss10 1 \, /ss11
+1 \, /ss12 1 \, /ss13 1 \, /ss14 1 \, /ss15 1 \, /ss16 1, f 8;
+#X msg 1472 259 list /h1 1 \, /h2 1 \, /h3 1 \, /h4 1 \, /h5 1 \, /h6
+1 \, /h7 1 \, /h8 1 \, /h9 1 \, /h10 1 \, /h11 1 \, /h12 1 \, /h13
+1 \, /h14 1 \, /h15 1 \, /h16 1 \, /hh1 1 \, /hh2 1 \, /hh3 1 \, /hh4
+1 \, /hh5 1 \, /hh6 1 \, /hh7 1 \, /hh8 1 \, /hh9 1 \, /hh10 1 \, /hh11
+1 \, /hh12 1 \, /hh13 1 \, /hh14 1 \, /hh15 1 \, /hh16 1, f 8;
+#X msg 613 256 list /k1 0 \, /k2 0 \, /k3 0 \, /k4 0 \, /k5 0 \, /k6
 0 \, /k7 0 \, /k8 0 \, /k9 0 \, /k10 0 \, /k11 0 \, /k12 0 \, /k13
 0 \, /k14 0 \, /k15 0 \, /k16 0 \, /kk1 0 \, /kk2 0 \, /kk3 0 \, /kk4
 0 \, /kk5 0 \, /kk6 0 \, /kk7 0 \, /kk8 0 \, /kk9 0 \, /kk10 0 \, /kk11
-0 \, /kk12 0 \, /kk13 0 \, /kk14 0 \, /kk15 0 \, /kk16 0;
-#X msg -383 202 list /k1 1 \, /k2 1 \, /k3 1 \, /k4 1 \, /k5 1 \, /k6
-1 \, /k7 1 \, /k8 1 \, /k9 1 \, /k10 1 \, /k11 1 \, /k12 1 \, /k13
-1 \, /k14 1 \, /k15 1 \, /k16 1 \, /kk1 1 \, /kk2 1 \, /kk3 1 \, /kk4
-1 \, /kk5 1 \, /kk6 1 \, /kk7 1 \, /kk8 1 \, /kk9 1 \, /kk11 1 \, /kk11
-1 \, /kk12 1 \, /kk13 1 \, /kk14 1 \, /kk15 1 \, /kk16 1;
-#X connect 0 0 10 0;
-#X connect 7 0 0 0;
-#X connect 7 0 2 0;
-#X connect 7 0 4 0;
-#X connect 8 0 1 0;
-#X connect 8 0 3 0;
-#X connect 8 0 5 0;
-#X connect 13 0 12 0;
-#X connect 14 0 12 0;
-#X connect 15 0 12 0;
-#X connect 16 0 12 0;
+0 \, /kk12 0 \, /kk13 0 \, /kk14 0 \, /kk15 0 \, /kk16 0, f 8;
+#X msg 689 256 list /s1 0 \, /s2 0 \, /s3 0 \, /s4 0 \, /s5 0 \, /s6
+0 \, /s7 0 \, /s8 0 \, /s9 0 \, /s10 0 \, /s11 0 \, /s12 0 \, /s13
+0 \, /s14 0 \, /s15 0 \, /s16 0 \, /ss1 0 \, /ss2 0 \, /ss3 0 \, /ss4
+0 \, /ss5 0 \, /ss6 0 \, /ss7 0 \, /ss8 0 \, /ss9 0 \, /ss10 0 \, /ss11
+0 \, /ss12 0 \, /ss13 0 \, /ss14 0 \, /ss15 0 \, /ss16 0, f 8;
+#X msg 770 259 list /h1 0 \, /h2 0 \, /h3 0 \, /h4 0 \, /h5 0 \, /h6
+0 \, /h7 0 \, /h8 0 \, /h9 0 \, /h10 0 \, /h11 0 \, /h12 0 \, /h13
+0 \, /h14 0 \, /h15 0 \, /h16 0 \, /hh1 0 \, /hh2 0 \, /hh3 0 \, /hh4
+0 \, /hh5 0 \, /hh6 0 \, /hh7 0 \, /hh8 0 \, /hh9 0 \, /hh10 0 \, /hh11
+0 \, /hh12 0 \, /hh13 0 \, /hh14 0 \, /hh15 0 \, /hh16 0, f 8;
+#X connect 6 0 11 0;
+#X connect 6 0 9 0;
+#X connect 7 0 10 0;
+#X connect 7 0 12 0;
+#X connect 9 0 0 0;
+#X connect 9 0 2 0;
+#X connect 9 0 4 0;
+#X connect 10 0 3 0;
+#X connect 10 0 5 0;
+#X connect 10 0 1 0;
+#X connect 11 0 18 0;
+#X connect 11 0 20 0;
+#X connect 11 0 19 0;
+#X connect 12 0 15 0;
+#X connect 12 0 16 0;
+#X connect 12 0 17 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 17 0 14 0;
+#X connect 18 0 13 0;
+#X connect 19 0 13 0;
+#X connect 20 0 13 0;
 #X restore 212 75 pd clear-fill-pat;
 #X text 135 41 The logic for clear and fill;
 #X text 170 56 patterns is stored here;

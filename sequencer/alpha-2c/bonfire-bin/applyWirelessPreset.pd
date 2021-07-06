@@ -1,25 +1,25 @@
 #N canvas -8 -8 1920 1037 12;
 #X obj 55 379 textfile;
-#X msg 55 335 read presets/clear-preset.txt;
+#X msg 55 335 read presets/Impeach.txt;
 #X msg 267 336 rewind;
 #X obj 55 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 55 274 t b b b b b b;
 #X obj 324 378 textfile;
-#X msg 324 334 read presets/clear-preset.txt;
+#X msg 324 334 read presets/Impeach.txt;
 #X msg 536 335 rewind;
 #X msg 324 401 set \$1, f 17;
 #X obj 324 273 t b b b b b b;
-#X msg 79 432 pattern-clear;
+#X msg 79 432 Impeach;
 #X msg 359 430 0;
 #X obj 591 415 textfile;
-#X msg 592 334 read presets/clear-preset.txt;
+#X msg 592 334 read presets/Impeach.txt;
 #X msg 804 335 rewind;
 #X obj 592 273 t b b b b b b;
 #X obj 591 449 list prepend set;
 #X obj 591 472 list trim;
-#X msg 599 523 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0, f 68;
+#X msg 599 523 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 1 0
+0 0 0 0 1 0, f 68;
 #X msg 605 496 set;
 #X obj 55 246 t b b;
 #X obj 324 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -29,25 +29,25 @@
 -1 -1;
 #X obj 592 244 t b b;
 #X obj 1091 415 textfile;
-#X msg 1092 334 read presets/clear-preset.txt;
+#X msg 1092 334 read presets/Impeach.txt;
 #X msg 1304 335 rewind;
 #X obj 1092 273 t b b b b b b;
 #X obj 1091 449 list prepend set;
 #X obj 1091 472 list trim;
-#X msg 1097 535 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0, f 68;
+#X msg 1097 535 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0
+0 0 1 0 0 0, f 68;
 #X msg 1105 496 set;
 #X obj 1092 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1092 244 t b b;
 #X obj 1601 415 textfile;
-#X msg 1602 334 read presets/clear-preset.txt;
+#X msg 1602 334 read presets/Impeach.txt;
 #X msg 1814 335 rewind;
 #X obj 1602 273 t b b b b b b;
 #X obj 1601 449 list prepend set;
 #X obj 1601 472 list trim;
-#X msg 1623 532 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0, f 68;
+#X msg 1623 532 1 0 1 0 1 0 1 1 1 0 0 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0
+1 0 1 0 1 0, f 68;
 #X msg 1615 496 set;
 #X obj 1602 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -58,14 +58,25 @@
 #X obj 605 657 outlet;
 #X obj 1095 657 outlet;
 #X obj 1615 657 outlet;
-#X obj 55 157 t b b b b b, f 183;
 #X obj 175 105 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 439 58 set;
 #X obj 359 64 inlet;
-#X msg 400 97 read presets/clear-preset.txt;
+#X msg 400 97 read presets/Impeach.txt;
 #X msg 55 402 set \$1, f 17;
-#X connect 0 0 56 0;
+#X obj 1948 402 textfile;
+#X msg 1948 358 read presets/Impeach.txt;
+#X msg 2160 359 rewind;
+#X msg 1948 425 set \$1, f 17;
+#X obj 1948 252 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1948 270 t b b;
+#X obj 1948 297 t b b b b b b b, f 29;
+#X obj 2527 820 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 55 157 t b b b b b b, f 272;
+#X obj 1921 669 outlet;
+#X connect 0 0 55 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 20 0;
@@ -134,19 +145,36 @@
 #X connect 43 0 44 0;
 #X connect 44 0 38 0;
 #X connect 44 1 38 0;
-#X connect 45 0 51 0;
-#X connect 51 0 3 0;
-#X connect 51 1 21 0;
-#X connect 51 2 23 0;
-#X connect 51 3 33 0;
-#X connect 51 4 43 0;
-#X connect 52 0 51 0;
-#X connect 53 0 55 0;
-#X connect 54 0 55 0;
-#X connect 54 0 1 0;
-#X connect 54 0 6 0;
-#X connect 54 0 13 0;
-#X connect 54 0 26 0;
-#X connect 54 0 36 0;
-#X connect 56 0 10 0;
-#X connect 56 0 46 0;
+#X connect 45 0 64 0;
+#X connect 51 0 64 0;
+#X connect 52 0 54 0;
+#X connect 53 0 54 0;
+#X connect 53 0 1 0;
+#X connect 53 0 6 0;
+#X connect 53 0 13 0;
+#X connect 53 0 26 0;
+#X connect 53 0 36 0;
+#X connect 53 0 57 0;
+#X connect 55 0 10 0;
+#X connect 55 0 46 0;
+#X connect 56 0 59 0;
+#X connect 57 0 56 0;
+#X connect 58 0 56 0;
+#X connect 59 0 65 0;
+#X connect 60 0 61 0;
+#X connect 61 0 62 0;
+#X connect 61 1 62 0;
+#X connect 62 0 57 0;
+#X connect 62 1 56 0;
+#X connect 62 2 56 0;
+#X connect 62 3 56 0;
+#X connect 62 4 56 0;
+#X connect 62 5 56 0;
+#X connect 62 6 58 0;
+#X connect 62 6 56 0;
+#X connect 64 0 3 0;
+#X connect 64 1 21 0;
+#X connect 64 2 23 0;
+#X connect 64 3 33 0;
+#X connect 64 4 43 0;
+#X connect 64 5 60 0;
