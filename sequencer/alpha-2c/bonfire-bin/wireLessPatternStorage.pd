@@ -3,7 +3,7 @@
 #X obj 33 88 outlet;
 #X msg 538 70 \; clear_pattern_w bang:;
 #X msg 538 106 \; fill_pattern_w bang:;
-#N canvas -8 -8 1920 1037 clear-fill-pat 1;
+#N canvas -8 -8 1920 1037 clear-fill-pat 0;
 #X msg 181 254 \; pattern_kick_1 0 \; pattern_kick_2 0 \; pattern_kick_3
 0 \; pattern_kick_4 0 \; pattern_kick_5 0 \; pattern_kick_6 0 \; pattern_kick_7
 0 \; pattern_kick_8 0 \; pattern_kick_9 0 \; pattern_kick_10 0 \; pattern_kick_11
@@ -319,6 +319,51 @@ hh8 \$24 \, hh9 \$25 \, hh10 \$26 \, hh11 \$27 \, hh12 \$28 \, hh13
 #X restore 780 517 pd setPresetSysHihat;
 #X msg 730 188 set read presets/clear-preset.txt;
 #X obj 650 634 s currentPatternName;
+#X obj 1351 228 t a a;
+#X obj 1383 348 send toGUI;
+#X msg 1351 382 pattern_kick_1 \$1 \, pattern_kick_2 \$2 \, pattern_kick_3
+\$3 \, pattern_kick_4 \$4 \, pattern_kick_5 \$5 \, pattern_kick_6 \$6
+\, pattern_kick_7 \$7 \, pattern_kick_8 \$8 \, pattern_kick_9 \$9 \,
+pattern_kick_10 \$10 \, pattern_kick_11 \$11 \, pattern_kick_12 \$12
+\, pattern_kick_13 \$13 \, pattern_kick_14 \$14 \, pattern_kick_15
+\$15 \, pattern_kick_16 \$16 \, pattern_kick_17 \$17 \, pattern_kick_18
+\$18 \, pattern_kick_19 \$19 \, pattern_kick_20 \$20 \, pattern_kick_21
+\$21 \, pattern_kick_22 \$22 \, pattern_kick_23 \$23 \, pattern_kick_24
+\$24 \, pattern_kick_25 \$25 \, pattern_kick_26 \$26 \, pattern_kick_27
+\$27 \, pattern_kick_28 \$28 \, pattern_kick_29 \$29 \, pattern_kick_30
+\$30 \, pattern_kick_31 \$31 \, pattern_kick_32 \$32, f 66;
+#X msg 1383 255 k1 \$1 \, k2 \$2 \, k3 \$3 \, k4 \$4 \, k5 \$5 \, k6
+\$6 \, k7 \$7 \, k8 \$8 \, k9 \$9 \, k10 \$10 \, k11 \$11 \, k12 \$12
+\, k13 \$13 \, k14 \$14 \, k15 \$15 \, k16 \$16 \, kk1 \$17 \, kk2
+\$18 \, kk3 \$19 \, kk4 \$20 \, kk5 \$21 \, kk6 \$22 \, kk7 \$23 \,
+kk8 \$24 \, kk9 \$25 \, kk10 \$26 \, kk11 \$27 \, kk12 \$28 \, kk13
+\$29 \, kk14 \$30 \, kk15 \$31 \, kk16 \$32, f 64;
+#X msg 1327 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0, f 65;
+#X msg 1327 116 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1, f 65;
+#X obj 1069 835 send toGUI;
+#X msg 1069 742 k1 \$1 \, k2 \$2 \, k3 \$3 \, k4 \$4 \, k5 \$5 \, k6
+\$6 \, k7 \$7 \, k8 \$8 \, k9 \$9 \, k10 \$10 \, k11 \$11 \, k12 \$12
+\, k13 \$13 \, k14 \$14 \, k15 \$15 \, k16 \$16 \, kk1 \$17 \, kk2
+\$18 \, kk3 \$19 \, kk4 \$20 \, kk5 \$21 \, kk6 \$22 \, kk7 \$23 \,
+kk8 \$24 \, kk9 \$25 \, kk10 \$26 \, kk11 \$27 \, kk12 \$28 \, kk13
+\$29 \, kk14 \$30 \, kk15 \$31 \, kk16 \$32, f 64;
+#X msg 1013 630 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0, f 65;
+#X msg 1013 603 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1, f 65;
+#X msg 1037 869 \; pattern_kick_1 \$1 \; pattern_kick_2 \$2 \; pattern_kick_3
+\$3 \; pattern_kick_4 \$4 \; pattern_kick_5 \$5 \; pattern_kick_6 \$6
+\; pattern_kick_7 \$7 \; pattern_kick_8 \$8 \; pattern_kick_9 \$9 \;
+pattern_kick_10 \$10 \; pattern_kick_11 \$11 \; pattern_kick_12 \$12
+\; pattern_kick_13 \$13 \; pattern_kick_14 \$14 \; pattern_kick_15
+\$15 \; pattern_kick_16 \$16 \; pattern_kick_17 \$17 \; pattern_kick_18
+\$18 \; pattern_kick_19 \$19 \; pattern_kick_20 \$20 \; pattern_kick_21
+\$21 \; pattern_kick_22 \$22 \; pattern_kick_23 \$23 \; pattern_kick_24
+\$24 \; pattern_kick_25 \$25 \; pattern_kick_26 \$26 \; pattern_kick_27
+\$27 \; pattern_kick_28 \$28 \; pattern_kick_29 \$29 \; pattern_kick_30
+\$30 \; pattern_kick_31 \$31 \; pattern_kick_32 \$32 \;, f 66;
 #X connect 8 0 9 0;
 #X connect 10 0 11 0;
 #X connect 12 0 13 0;
@@ -339,3 +384,11 @@ hh8 \$24 \, hh9 \$25 \, hh10 \$26 \, hh11 \$27 \, hh12 \$28 \, hh13
 #X connect 26 0 19 0;
 #X connect 30 0 18 1;
 #X connect 30 0 19 0;
+#X connect 32 0 34 0;
+#X connect 32 1 35 0;
+#X connect 35 0 33 0;
+#X connect 36 0 32 0;
+#X connect 37 0 32 0;
+#X connect 39 0 38 0;
+#X connect 40 0 42 0;
+#X connect 41 0 42 0;
