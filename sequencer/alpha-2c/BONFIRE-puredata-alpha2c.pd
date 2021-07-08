@@ -2869,7 +2869,7 @@ sounds.;
 #X obj 75 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 275 319 &&, f 7;
-#X obj 276 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 276 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 321 279 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -3274,107 +3274,6 @@ sounds.;
 0 0 1 0 0 0, f 65;
 #X msg 313 1257 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
 1 0 1 0 1 0, f 65;
-#N canvas -8 -8 1920 1037 setPresetSysKick 0;
-#X obj 141 154 t a a;
-#X obj 173 274 send toGUI;
-#X obj 141 116 inlet;
-#X msg 141 308 \; pattern_kick_1 \$1 \; pattern_kick_2 \$2 \; pattern_kick_3
-\$3 \; pattern_kick_4 \$4 \; pattern_kick_5 \$5 \; pattern_kick_6 \$6
-\; pattern_kick_7 \$7 \; pattern_kick_8 \$8 \; pattern_kick_9 \$9 \;
-pattern_kick_10 \$10 \; pattern_kick_11 \$11 \; pattern_kick_12 \$12
-\; pattern_kick_13 \$13 \; pattern_kick_14 \$14 \; pattern_kick_15
-\$15 \; pattern_kick_16 \$16 \; pattern_kick_17 \$17 \; pattern_kick_18
-\$18 \; pattern_kick_19 \$19 \; pattern_kick_20 \$20 \; pattern_kick_21
-\$21 \; pattern_kick_22 \$22 \; pattern_kick_23 \$23 \; pattern_kick_24
-\$24 \; pattern_kick_25 \$25 \; pattern_kick_26 \$26 \; pattern_kick_27
-\$27 \; pattern_kick_28 \$28 \; pattern_kick_29 \$29 \; pattern_kick_30
-\$30 \; pattern_kick_31 \$31 \; pattern_kick_32 \$32 \;;
-#X msg 403 313 kick k + kk in;
-#X obj 403 337 print;
-#X msg 351 457 kick on msg in;
-#X obj 234 160 list;
-#X msg 234 186 list /k1 \$1 \, /k2 \$2 \, /k3 \$3 \, /k4 \$4 \, /k5
-\$5 \, /k6 \$6 \, /k7 \$7 \, /k8 \$8 \, /k9 \$9 \, /k10 \$10 \, /k11
-\$11 \, /k12 \$12 \, /k13 \$13 \, /k14 \$14 \, /k15 \$15 \, /k16 \$16
-\, /kk1 \$17 \, /kk2 \$18 \, /kk3 \$19 \, /kk4 \$20 \, /kk5 \$21 \,
-/kk6 \$22 \, /kk7 \$23 \, /kk8 \$24 \, /kk9 \$25 \, /kk10 \$26 \, /kk11
-\$27 \, /kk12 \$28 \, /kk13 \$29 \, /kk14 \$30 \, /kk15 \$31 \, /kk16
-\$32, f 64;
-#X connect 0 0 3 0;
-#X connect 0 1 7 0;
-#X connect 2 0 0 0;
-#X connect 3 0 6 0;
-#X connect 4 0 5 0;
-#X connect 6 0 5 0;
-#X connect 7 0 8 0;
-#X connect 8 0 1 0;
-#X restore 795 1259 pd setPresetSysKick;
-#N canvas -8 -8 1920 1037 setPresetSysSnare 0;
-#X obj 141 154 t a a;
-#X obj 173 274 send toGUI;
-#X obj 141 116 inlet;
-#X msg 173 181 s1 \$1 \, s2 \$2 \, s3 \$3 \, s4 \$4 \, s5 \$5 \, s6
-\$6 \, s7 \$7 \, s8 \$8 \, s9 \$9 \, s10 \$10 \, s11 \$11 \, s12 \$12
-\, s13 \$13 \, s14 \$14 \, s15 \$15 \, s16 \$16 \, ss1 \$17 \, ss2
-\$18 \, ss3 \$19 \, ss4 \$20 \, ss5 \$21 \, ss6 \$22 \, ss7 \$23 \,
-ss8 \$24 \, ss9 \$25 \, ss10 \$26 \, ss11 \$27 \, ss12 \$28 \, ss13
-\$29 \, ss14 \$30 \, ss15 \$31 \, ss16 \$32, f 64;
-#X msg 141 308 \; pattern_snare_1 \$1 \; pattern_snare_2 \$2 \; pattern_snare_3
-\$3 \; pattern_snare_4 \$4 \; pattern_snare_5 \$5 \; pattern_snare_6
-\$6 \; pattern_snare_7 \$7 \; pattern_snare_8 \$8 \; pattern_snare_9
-\$9 \; pattern_snare_10 \$10 \; pattern_snare_11 \$11 \; pattern_snare_12
-\$12 \; pattern_snare_13 \$13 \; pattern_snare_14 \$14 \; pattern_snare_15
-\$15 \; pattern_snare_16 \$16 \; pattern_snare_17 \$17 \; pattern_snare_18
-\$18 \; pattern_snare_19 \$19 \; pattern_snare_20 \$20 \; pattern_snare_21
-\$21 \; pattern_snare_22 \$22 \; pattern_snare_23 \$23 \; pattern_snare_24
-\$24 \; pattern_snare_25 \$25 \; pattern_snare_26 \$26 \; pattern_snare_27
-\$27 \; pattern_snare_28 \$28 \; pattern_snare_29 \$29 \; pattern_snare_30
-\$30 \; pattern_snare_31 \$31 \; pattern_snare_32 \$32 \;, f 22;
-#X obj 403 337 print;
-#X msg 403 313 kick s + ss in;
-#X msg 351 457 snare on msg in;
-#X connect 0 0 4 0;
-#X connect 0 1 3 0;
-#X connect 2 0 0 0;
-#X connect 3 0 1 0;
-#X connect 3 0 6 0;
-#X connect 4 0 7 0;
-#X connect 6 0 5 0;
-#X connect 7 0 5 0;
-#X restore 818 1219 pd setPresetSysSnare;
-#N canvas -8 -8 1920 1037 setPresetSysHihat 0;
-#X obj 141 154 t a a;
-#X obj 173 274 send toGUI;
-#X obj 141 116 inlet;
-#X msg 173 181 h1 \$1 \, h2 \$2 \, h3 \$3 \, h4 \$4 \, h5 \$5 \, h6
-\$6 \, h7 \$7 \, h8 \$8 \, h9 \$9 \, h10 \$10 \, h11 \$11 \, h12 \$12
-\, h13 \$13 \, h14 \$14 \, h15 \$15 \, h16 \$16 \, hh1 \$17 \, hh2
-\$18 \, hh3 \$19 \, hh4 \$20 \, hh5 \$21 \, hh6 \$22 \, hh7 \$23 \,
-hh8 \$24 \, hh9 \$25 \, hh10 \$26 \, hh11 \$27 \, hh12 \$28 \, hh13
-\$29 \, hh14 \$30 \, hh15 \$31 \, hh16 \$32, f 64;
-#X msg 141 308 \; pattern_hat_1 \$1 \; pattern_hat_2 \$2 \; pattern_hat_3
-\$3 \; pattern_hat_4 \$4 \; pattern_hat_5 \$5 \; pattern_hat_6 \$6
-\; pattern_hat_7 \$7 \; pattern_hat_8 \$8 \; pattern_hat_9 \$9 \; pattern_hat_10
-\$10 \; pattern_hat_11 \$11 \; pattern_hat_12 \$12 \; pattern_hat_13
-\$13 \; pattern_hat_14 \$14 \; pattern_hat_15 \$15 \; pattern_hat_16
-\$16 \; pattern_hat_17 \$17 \; pattern_hat_18 \$18 \; pattern_hat_19
-\$19 \; pattern_hat_20 \$20 \; pattern_hat_21 \$21 \; pattern_hat_22
-\$22 \; pattern_hat_23 \$23 \; pattern_hat_24 \$24 \; pattern_hat_25
-\$25 \; pattern_hat_26 \$26 \; pattern_hat_27 \$27 \; pattern_hat_28
-\$28 \; pattern_hat_29 \$29 \; pattern_hat_30 \$30 \; pattern_hat_31
-\$31 \; pattern_hat_32 \$32 \;, f 22;
-#X obj 403 337 print;
-#X msg 403 313 hat h + hh in;
-#X msg 351 457 hat on msg in;
-#X connect 0 0 4 0;
-#X connect 0 1 3 0;
-#X connect 2 0 0 0;
-#X connect 3 0 1 0;
-#X connect 3 0 6 0;
-#X connect 4 0 7 0;
-#X connect 6 0 5 0;
-#X connect 7 0 5 0;
-#X restore 850 1179 pd setPresetSysHihat;
 #X msg -229 630 set read presets/clear-preset.txt;
 #X obj 33 1402 s currentPatternName;
 #X obj 33 866 bonfire-bin/applyWirelessPreset, f 77;
@@ -3387,8 +3286,8 @@ hh8 \$24 \, hh9 \$25 \, hh10 \$26 \, hh11 \$27 \, hh12 \$28 \, hh13
 0 1;
 #X floatatom 164 1097 5 0 0 0 - - -;
 #X floatatom 141 958 5 0 0 0 - - -;
-#X msg 77 812 read presets/Levee.txt;
-#X obj 33 813 t b a;
+#X msg 52 838 read presets/Levee.txt;
+#X obj 33 563 t b a;
 #X msg -229 608 set read presets/test-preset.txt;
 #X obj 141 930 r SelectorControllEnter;
 #X msg 153 1005 0, f 1;
@@ -3399,29 +3298,29 @@ hh8 \$24 \, hh9 \$25 \, hh10 \$26 \, hh11 \$27 \, hh12 \$28 \, hh13
 #X msg 73 347 set read presets/2Beat.txt;
 #X msg 113 367 set read presets/Iconic8.txt;
 #X msg 154 387 set read presets/Rock.txt;
-#X msg 638 597 set read presets/Starlight.txt;
+#X msg 876 387 set read presets/Starlight.txt;
 #X msg 558 950 16;
-#X obj 558 1043 s overWriteSteps;
+#X obj 558 1049 s overWriteSteps;
 #X obj 558 982 sel 16 32, f 13;
 #X msg 558 1008 0;
 #X msg 602 1008 1;
 #X obj 577 914 r SelectorControllEnter;
-#X msg 637 576 set read presets/FeelGood.txt;
+#X msg 835 367 set read presets/FeelGood.txt;
 #X msg 194 407 set read presets/Punk.txt;
 #X msg 234 427 set read presets/Levee.txt;
-#X msg 275 327 set read presets/Impeach.txt;
+#X msg 274 327 set read presets/Impeach.txt;
 #X msg 314 347 set read presets/Funky.txt;
-#X msg 355 367 set read presets/BoDiddley.txt;
-#X msg 638 618 set read presets/Persiana.txt;
-#X msg 396 387 set read presets/BoomBap.txt;
-#X msg 437 407 set read presets/Shuffle.txt;
-#X msg 476 427 set read presets/HipHop.txt;
-#X msg 516 328 set read presets/Techno.txt;
-#X msg 556 348 set read presets/Disco.txt;
-#X msg 597 368 set read presets/SonClave.txt;
-#X msg 637 388 set read presets/Rumba.txt;
-#X msg 676 408 set read presets/BossaNova.txt;
-#X msg 717 427 set read presets/Dembow.txt;
+#X msg 354 367 set read presets/BoDiddley.txt;
+#X msg 917 407 set read presets/Persiana.txt;
+#X msg 395 387 set read presets/BoomBap.txt;
+#X msg 435 407 set read presets/Shuffle.txt;
+#X msg 475 427 set read presets/HipHop.txt;
+#X msg 514 328 set read presets/Techno.txt;
+#X msg 554 348 set read presets/Disco.txt;
+#X msg 595 368 set read presets/SonClave.txt;
+#X msg 635 388 set read presets/Rumba.txt;
+#X msg 674 408 set read presets/BossaNova.txt;
+#X msg 715 427 set read presets/Dembow.txt;
 #X msg 300 131 \; clear_pattern_w bang:;
 #X obj 533 -254 receive fromGUI;
 #X obj 533 -231 list trim;
@@ -3436,32 +3335,32 @@ hh8 \$24 \, hh9 \$25 \, hh10 \$26 \, hh11 \$27 \, hh12 \$28 \, hh13
 #X obj 533 7 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text -227 584 Presets for testing \, dummy presets;
-#X text 633 513 Specific song presets;
-#X text 677 488 Soon to be implemented!;
-#X msg 637 533 set read presets/79.txt;
-#X msg 637 554 set read presets/JesusEtc.txt;
-#X obj 725 1109 send toGUI;
-#X msg 725 1048 list /stepAmm \$1;
-#X msg 638 639 set read presets/WeirdFish.txt;
-#X msg 638 661 set read presets/ThereThere.txt;
-#X msg 638 682 set read presets/PresentTense.txt;
-#X msg 638 704 set read presets/MightWrong.txt;
-#X msg 638 724 set read presets/Reckoner.txt;
-#X obj 33 281 sel 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19,
-f 110;
+#X msg 755 327 set read presets/79.txt;
+#X msg 795 347 set read presets/JesusEtc.txt;
+#X obj 725 1050 send toGUI;
+#X msg 725 1027 list /stepAmm \$1;
+#X msg 956 426 set read presets/WeirdFish.txt;
+#X msg 996 327 set read presets/ThereThere.txt;
+#X msg 1037 347 set read presets/PresentTense.txt;
+#X msg 1077 367 set read presets/MightWrong.txt;
+#X msg 1117 387 set read presets/Reckoner.txt;
 #X obj -55 227 bonfire-bin/selectorCounterWFloorCeiling 0 19;
 #X obj 328 1107 loadbang;
 #X msg 328 1131 set;
-#X obj 149 1336 bonfire-bin/printPatternToGUIandMatrix;
+#X obj 150 1336 bonfire-bin/printPatternToGUIandMatrix;
+#X obj 1904 556 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 33 281 sel 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+21 22 23 24 25 26 27 28, f 161;
 #X connect 0 0 11 0;
 #X connect 1 0 7 0;
-#X connect 1 0 131 1;
+#X connect 1 0 125 1;
 #X connect 2 0 7 0;
-#X connect 2 0 131 2;
+#X connect 2 0 125 2;
 #X connect 4 0 6 0;
 #X connect 5 0 14 0;
 #X connect 6 0 10 0;
-#X connect 7 0 131 0;
+#X connect 7 0 125 0;
 #X connect 8 0 130 0;
 #X connect 9 0 5 0;
 #X connect 9 0 12 0;
@@ -3507,112 +3406,121 @@ f 110;
 #X connect 47 0 48 0;
 #X connect 48 0 49 0;
 #X connect 49 0 14 0;
-#X connect 50 0 107 0;
-#X connect 53 0 63 0;
+#X connect 50 0 104 0;
+#X connect 53 0 60 0;
 #X connect 53 0 5 0;
-#X connect 55 0 134 0;
-#X connect 56 0 134 1;
-#X connect 57 0 134 2;
-#X connect 61 0 73 0;
-#X connect 63 0 54 0;
-#X connect 63 0 62 0;
-#X connect 63 1 71 0;
-#X connect 63 2 55 0;
-#X connect 63 3 56 0;
-#X connect 63 4 57 0;
-#X connect 63 5 85 0;
-#X connect 64 0 78 0;
-#X connect 64 0 79 0;
-#X connect 65 0 76 0;
-#X connect 65 1 77 0;
-#X connect 67 0 73 0;
-#X connect 68 0 66 0;
-#X connect 68 0 70 0;
-#X connect 69 0 68 1;
-#X connect 71 0 65 0;
-#X connect 71 0 68 0;
-#X connect 73 0 53 0;
-#X connect 73 1 72 0;
-#X connect 73 1 63 1;
-#X connect 74 0 73 0;
-#X connect 75 0 71 0;
-#X connect 76 0 69 0;
-#X connect 77 0 69 0;
-#X connect 78 0 55 0;
-#X connect 78 0 56 0;
-#X connect 78 0 57 0;
-#X connect 80 0 73 0;
-#X connect 81 0 73 0;
-#X connect 82 0 73 0;
-#X connect 83 0 73 0;
-#X connect 84 0 73 0;
-#X connect 85 0 87 0;
-#X connect 87 0 88 0;
-#X connect 87 1 89 0;
-#X connect 88 0 86 0;
-#X connect 88 0 124 0;
-#X connect 89 0 86 0;
-#X connect 89 0 124 0;
-#X connect 90 0 85 0;
-#X connect 91 0 73 0;
-#X connect 92 0 73 0;
-#X connect 93 0 73 0;
-#X connect 94 0 73 0;
-#X connect 95 0 73 0;
-#X connect 96 0 73 0;
-#X connect 97 0 73 0;
-#X connect 98 0 73 0;
-#X connect 99 0 73 0;
-#X connect 100 0 73 0;
-#X connect 101 0 73 0;
-#X connect 102 0 73 0;
-#X connect 103 0 73 0;
-#X connect 104 0 73 0;
-#X connect 105 0 73 0;
-#X connect 106 0 73 0;
-#X connect 108 0 109 0;
-#X connect 109 0 116 0;
-#X connect 110 0 117 0;
-#X connect 111 0 110 1;
+#X connect 55 0 128 0;
+#X connect 56 0 128 1;
+#X connect 57 0 128 2;
+#X connect 58 0 70 0;
+#X connect 60 0 54 0;
+#X connect 60 0 59 0;
+#X connect 60 1 68 0;
+#X connect 60 2 55 0;
+#X connect 60 3 56 0;
+#X connect 60 4 57 0;
+#X connect 60 5 82 0;
+#X connect 61 0 75 0;
+#X connect 61 0 76 0;
+#X connect 62 0 73 0;
+#X connect 62 1 74 0;
+#X connect 64 0 70 0;
+#X connect 65 0 63 0;
+#X connect 65 0 67 0;
+#X connect 66 0 65 1;
+#X connect 68 0 62 0;
+#X connect 68 0 65 0;
+#X connect 70 0 53 0;
+#X connect 70 1 69 0;
+#X connect 70 1 60 1;
+#X connect 71 0 70 0;
+#X connect 72 0 68 0;
+#X connect 73 0 66 0;
+#X connect 74 0 66 0;
+#X connect 75 0 55 0;
+#X connect 75 0 56 0;
+#X connect 75 0 57 0;
+#X connect 77 0 70 0;
+#X connect 78 0 70 0;
+#X connect 79 0 70 0;
+#X connect 80 0 70 0;
+#X connect 81 0 70 0;
+#X connect 82 0 84 0;
+#X connect 84 0 85 0;
+#X connect 84 1 86 0;
+#X connect 85 0 83 0;
+#X connect 85 0 119 0;
+#X connect 86 0 83 0;
+#X connect 86 0 119 0;
+#X connect 87 0 82 0;
+#X connect 88 0 70 0;
+#X connect 89 0 70 0;
+#X connect 90 0 70 0;
+#X connect 91 0 70 0;
+#X connect 92 0 70 0;
+#X connect 93 0 70 0;
+#X connect 94 0 70 0;
+#X connect 95 0 70 0;
+#X connect 96 0 70 0;
+#X connect 97 0 70 0;
+#X connect 98 0 70 0;
+#X connect 99 0 70 0;
+#X connect 100 0 70 0;
+#X connect 101 0 70 0;
+#X connect 102 0 70 0;
+#X connect 103 0 70 0;
+#X connect 105 0 106 0;
+#X connect 106 0 113 0;
+#X connect 107 0 114 0;
+#X connect 108 0 107 1;
+#X connect 109 0 108 0;
+#X connect 110 0 107 0;
+#X connect 110 1 109 0;
+#X connect 111 0 108 0;
 #X connect 112 0 111 0;
 #X connect 113 0 110 0;
-#X connect 113 1 112 0;
-#X connect 114 0 111 0;
-#X connect 115 0 114 0;
-#X connect 116 0 113 0;
-#X connect 117 0 50 0;
-#X connect 121 0 73 0;
-#X connect 122 0 73 0;
-#X connect 124 0 123 0;
-#X connect 125 0 73 0;
-#X connect 126 0 73 0;
-#X connect 127 0 73 0;
-#X connect 128 0 73 0;
-#X connect 129 0 73 0;
-#X connect 130 0 80 0;
-#X connect 130 1 81 0;
-#X connect 130 2 82 0;
-#X connect 130 3 83 0;
-#X connect 130 4 92 0;
-#X connect 130 5 93 0;
-#X connect 130 6 94 0;
-#X connect 130 7 95 0;
-#X connect 130 8 96 0;
-#X connect 130 9 98 0;
-#X connect 130 10 99 0;
-#X connect 130 11 100 0;
-#X connect 130 12 101 0;
-#X connect 130 13 102 0;
-#X connect 130 14 103 0;
-#X connect 130 15 104 0;
-#X connect 130 16 105 0;
-#X connect 130 17 106 0;
-#X connect 130 18 121 0;
-#X connect 131 0 8 0;
-#X connect 132 0 133 0;
-#X connect 133 0 55 0;
-#X connect 133 0 56 0;
-#X connect 133 0 57 0;
+#X connect 114 0 50 0;
+#X connect 116 0 70 0;
+#X connect 117 0 70 0;
+#X connect 119 0 118 0;
+#X connect 120 0 70 0;
+#X connect 121 0 70 0;
+#X connect 122 0 70 0;
+#X connect 123 0 70 0;
+#X connect 124 0 70 0;
+#X connect 125 0 8 0;
+#X connect 126 0 127 0;
+#X connect 127 0 55 0;
+#X connect 127 0 56 0;
+#X connect 127 0 57 0;
+#X connect 130 0 77 0;
+#X connect 130 1 78 0;
+#X connect 130 2 79 0;
+#X connect 130 3 80 0;
+#X connect 130 4 89 0;
+#X connect 130 5 90 0;
+#X connect 130 6 91 0;
+#X connect 130 7 92 0;
+#X connect 130 8 93 0;
+#X connect 130 9 95 0;
+#X connect 130 10 96 0;
+#X connect 130 11 97 0;
+#X connect 130 12 98 0;
+#X connect 130 13 99 0;
+#X connect 130 14 100 0;
+#X connect 130 15 101 0;
+#X connect 130 16 102 0;
+#X connect 130 17 103 0;
+#X connect 130 18 116 0;
+#X connect 130 19 117 0;
+#X connect 130 20 88 0;
+#X connect 130 21 81 0;
+#X connect 130 22 94 0;
+#X connect 130 23 120 0;
+#X connect 130 24 121 0;
+#X connect 130 25 122 0;
+#X connect 130 26 123 0;
+#X connect 130 27 124 0;
 #X coords 0 -1 1 1 79 32 2 100 100;
 #X restore 483 95 pd patternSelectorGUI;
 #X msg 483 135 Levee;
