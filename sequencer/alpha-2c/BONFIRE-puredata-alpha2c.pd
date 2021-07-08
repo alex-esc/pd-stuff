@@ -2869,7 +2869,7 @@ sounds.;
 #X obj 75 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 275 319 &&, f 7;
-#X obj 276 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 276 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 321 279 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -3308,7 +3308,7 @@ pattern_kick_10 \$10 \; pattern_kick_11 \$11 \; pattern_kick_12 \$12
 #X connect 6 0 5 0;
 #X connect 7 0 8 0;
 #X connect 8 0 1 0;
-#X restore 785 1259 pd setPresetSysKick;
+#X restore 795 1259 pd setPresetSysKick;
 #N canvas -8 -8 1920 1037 setPresetSysSnare 0;
 #X obj 141 154 t a a;
 #X obj 173 274 send toGUI;
