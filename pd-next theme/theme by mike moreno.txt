@@ -1,0 +1,3 @@
+source: https://forum.pdpatchrepo.info/topic/13458/simple-drum-machine/4
+
+original file: https://raw.githubusercontent.com/MikeMorenoDSP/pd-mkmr/master/gui/pd-next-themes/vital-theme.tcl
