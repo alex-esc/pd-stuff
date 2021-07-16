@@ -1,6 +1,6 @@
 #N canvas -8 -8 1920 1037 12;
 #X obj 36 -347 hsl 900 20 48 84 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 34488 1;
+-1 -1 34278 1;
 #X obj 33 171 *~ 0.3;
 #X obj 33 -206 mtof;
 #X obj 126 286 rev3~, f 27;
@@ -12,7 +12,7 @@
 #X floatatom 267 234 5 0 0 0 - - -;
 #X obj 33 321 clip~ -1 1;
 #X obj 149 -137 vsl 50 20 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3342 0;
+-1 -1 3142 0;
 #X obj 33 -9 *~, f 17;
 #X obj 149 -82 vline~;
 #X obj 33 -420 cnv 15 42 60 empty empty empty 20 12 0 14 -233017 -66577
@@ -94,14 +94,14 @@
 #X obj 577 -76 vline~;
 #X obj 442 -147 sel 1 0, f 16;
 #X obj 533 -199 hsl 50 15 0 3000 0 0 empty empty attack -2 -8 0 10
--262144 -1 -1 446 1;
+-262144 -1 -1 980 1;
 #X obj 620 -199 hsl 50 15 0 3000 0 0 empty empty decay -2 -8 0 10 -262144
--1 -1 9800 1;
+-1 -1 1634 1;
 #X obj 725 -271 loadbang;
 #X msg 754 -218 500;
 #X msg 695 -218 300;
-#X msg 530 -109 1 136.672;
-#X msg 617 -109 0 3000;
+#X msg 530 -109 1 300;
+#X msg 617 -109 0 500;
 #X msg 530 -174 set 1 \$1;
 #X msg 617 -174 set 0 \$1;
 #X obj 442 -271 route /soundBtn /attackKnob /decayKnob;
@@ -298,17 +298,17 @@
 #X obj 264 377 vcf~ 1, f 10;
 #X floatatom 264 272 5 0 0 0 - - -;
 #X obj 111 262 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X obj 111 344 sel 0 1, f 17;
 #X obj 68 462 *~, f 5;
-#X obj 100 431 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 100 431 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 133 402 del 1;
 #X msg 100 402 1;
 #X msg 133 428 0;
 #X obj 111 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 181 431 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 181 431 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 214 402 del 1;
 #X msg 181 402 1;
@@ -345,7 +345,7 @@
 #X connect 9 0 1 0;
 #X restore 371 276 pd sqrFltrMapper;
 #X obj 418 147 hsl 128 15 0.01 0.998 0 0 empty empty empty -2 -8 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 16786 1;
 #X msg 429 377 19000;
 #X obj 264 402 lop~, f 23;
 #X obj 415 183 sel 0.01;
@@ -452,7 +452,7 @@
 #X connect 50 0 7 0;
 #X restore 33 -88 pd oscil~;
 #X obj 280 -127 vsl 10 30 0 100 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 0;
+-1 -1 808 0;
 #X obj 33 28 *~, f 34;
 #X obj 149 -271 route /ringslider /vibratoKnob, f 34;
 #N canvas -8 -8 1920 1037 mapVibrato 0;
@@ -482,7 +482,7 @@
 #X msg 296 -38 \$1 50;
 #X msg 280 -161 \$1 50;
 #X obj 391 -8 vline~;
-#X obj 33 64 *~, f 46;
+#X obj 53 64 *~, f 46;
 #X obj 271 -5 osc~ 0;
 #X floatatom 242 -88 5 0 0 0 - - -;
 #X obj 242 -64 sel 0;
@@ -617,6 +617,9 @@
 -1;
 #X obj 636 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X msg 164 -539 \; pd dsp 1;
+#X obj 164 -567 loadbang;
+#X obj 315 -113 sig~;
 #X connect 0 0 119 0;
 #X connect 1 0 3 0;
 #X connect 1 0 3 1;
@@ -693,16 +696,16 @@
 #X connect 95 0 101 0;
 #X connect 95 0 106 0;
 #X connect 96 0 104 0;
+#X connect 96 0 51 0;
 #X connect 97 0 77 0;
 #X connect 97 1 98 0;
 #X connect 98 0 100 0;
 #X connect 99 0 102 0;
 #X connect 99 0 109 0;
+#X connect 99 0 131 0;
 #X connect 100 0 99 0;
-#X connect 101 0 105 0;
 #X connect 102 0 95 0;
 #X connect 103 0 104 1;
-#X connect 104 0 51 0;
 #X connect 105 0 96 1;
 #X connect 106 0 107 0;
 #X connect 107 0 113 0;
@@ -712,7 +715,6 @@
 #X connect 110 0 112 0;
 #X connect 111 0 103 0;
 #X connect 112 0 103 0;
-#X connect 113 0 105 0;
 #X connect 114 0 50 0;
 #X connect 115 0 50 0;
 #X connect 116 0 114 0;
@@ -729,3 +731,5 @@
 #X connect 124 0 125 0;
 #X connect 125 0 55 0;
 #X connect 126 0 119 0;
+#X connect 130 0 129 0;
+#X connect 131 0 105 0;
