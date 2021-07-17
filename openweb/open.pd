@@ -3,6 +3,7 @@
 #X obj 410 297 pdcontrol;
 #X obj 425 181 loadbang;
 #X obj 425 205 del 2000;
+#X text 570 215 MobMuPlat can't open this;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
