@@ -1,6 +1,6 @@
 #N canvas -8 -8 1920 1037 12;
 #X obj 36 -347 hsl 900 20 48 84 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 179800 1;
+-1 -1 73602 1;
 #X obj 33 171 *~ 0.3;
 #X obj 33 -206 mtof;
 #X obj 126 286 rev3~, f 27;
@@ -12,7 +12,7 @@
 #X floatatom 267 234 5 0 0 0 - - -;
 #X obj 33 321 clip~ -1 1;
 #X obj 149 -137 vsl 50 20 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3800 0;
+-1 -1 2874 0;
 #X obj 33 -9 *~, f 17;
 #X obj 149 -52 vline~;
 #X obj 33 -420 cnv 15 42 60 empty empty empty 20 12 0 14 -233017 -66577
@@ -300,7 +300,7 @@
 #X obj 259 352 vcf~ 1, f 10;
 #X floatatom 259 247 5 0 0 0 - - -;
 #X obj 106 237 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X obj 106 319 sel 0 1, f 17;
 #X obj 63 437 *~, f 5;
 #X obj 106 189 loadbang;
@@ -333,7 +333,7 @@
 #X connect 9 0 1 0;
 #X restore 366 251 pd sqrFltrMapper;
 #X obj 413 146 hsl 128 15 0.01 0.998 0 0 empty empty empty -2 -8 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 44 1;
 #X msg 424 352 19000;
 #X obj 259 377 lop~, f 23;
 #X obj 410 172 sel 0.01;
@@ -588,26 +588,6 @@
 #X obj 164 -567 loadbang;
 #X obj 267 -34 sig~;
 #X obj 215 -107 sig~;
-#N canvas -8 -8 1920 1037 updater 1;
-#X obj 324 182 pdcontrol;
-#X msg 297 113 browse https://raw.githubusercontent.com/alex-esc/pd-stuff/main/greenwood%20-%20ondes%20martenot/newver.txt
-;
-#X obj 324 206 print;
-#X obj 477 396 pdcontrol;
-#X obj 477 420 print;
-#X msg 477 211 browse https://raw.githubusercontent.com/alex-esc/pd-stuff/main/greenwood%20-%20ondes%20martenot/newver.txt
-;
-#X obj 184 334 textfile;
-#X msg 34 256 read https://raw.githubusercontent.com/alex-esc/pd-stuff/main/greenwood%20-%20ondes%20martenot/newver.txt
-;
-#X obj 184 358 print list;
-#X connect 0 0 2 0;
-#X connect 1 0 0 0;
-#X connect 3 0 4 0;
-#X connect 5 0 3 0;
-#X connect 6 0 8 0;
-#X connect 7 0 6 0;
-#X restore 352 -525 pd updater;
 #X connect 0 0 104 0;
 #X connect 1 0 3 0;
 #X connect 1 0 3 1;
