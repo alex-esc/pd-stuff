@@ -1,0 +1,30 @@
+#N canvas -8 -8 1936 1040 10;
+#X obj 395 192 cnv 15 339 150 empty empty empty 20 12 0 14 #c4ffe1
+#404040 0;
+#X obj 5 115 cnv 15 371 227 empty empty empty 20 12 0 14 #a8d3ff #404040
+0;
+#X obj 6 7 cnv 15 372 98 empty empty empty 20 12 0 14 #ffcaff #404040
+0;
+#X text 8 17 Digital signal processing;
+#X text 8 68 * Processing = to analize or synthesize;
+#X text 8 48 * Signal = description of evolution of physical phenomenon
+;
+#X text 10 124 Digital signals have discrete time and amplitude \,
+x & y.;
+#X text 87 151 Problems with time + Philosophy;
+#X text 9 172 Zeno's paradox is about infinetly dividing time. Kant
+said time is apreori so "solve time".;
+#X text 18 218 chopping up time \, signals are sequences;
+#X text 270 218 x: z --> v;
+#X text 98 245 x[n] = value_1 \, value_2 ...;
+#X text 91 266 where is x = signal \, n = time;
+#X text 92 297 Nyquist and Shannon saved time;
+#X text 29 320 x(t)= SUM^infty_(n=-infty) x[n]sinc((t-nT_s)/(T_s))
+;
+#X text 405 199 discrete amplitude;
+#X text 405 224 Representation as sets of integers;
+#X text 405 249 It can be stored \, procesed and transmited easily
+;
+#X text 405 274 Analog signals are usually atenuated and noisy;
+#X text 405 299 Digital signals (square waves) are de-noised with a
+thershold;

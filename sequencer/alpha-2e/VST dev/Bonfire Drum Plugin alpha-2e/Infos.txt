@@ -1,0 +1,54 @@
+MANUAL
+
+Bonfire is a drum synthesizer with timbre controls for it's 3 different drum modules. Bonfire runs inside a DAW as a plugin and on phones and tablets as a drum machine via the MobMuPlat app.
+
+Bonfire has 3 drum modules: Basic, Modern, Complex & Blend, where you can blend between each module.
+
+MODULES
+
+* Basic: Simple and chirpy synthesized drum machine sounds
+* Modern: A deeper sound aimed at emulating an 80's-90's electric drum sound
+* Complex: Realistic drum synthesizer using physical modeling, both kick and snare are made from different configurations of the module
+
+
+TRIGGERING THE DRUM SOUNDS
+
+Add the plugin to a MIDI track and program a pattern on your DAW. Kick is triggered by playing any C note, Snare is triggered by D and Hi-hats are triggered by an E note.
+
+
+PLUGIN LABELS:
+
+Modern Kick controls
+D = Decay
+P = Pitch Scale
+F = Filter Scale
+S = Sine Scale
+
+Modern Snare controls
+D = Decay
+P = Tone Pitch Envelope
+F = Noise Filter
+S = Tone Sine Scale/Multiply
+V = Tone Volume
+
+Complex Kit Labels
+F = Frequency
+B = Feedback
+D = Damping
+G = Allpass Filter Gain
+A = Allpass Filter Frequency
+N = Noise Level
+
+*note that both kick and snare on complex have the same parameters
+
+Drum kit mixer
+S = Simple kit volume
+M = Modern kit volume
+C = Complex kit volume
+
+
+
+
+
+Version: Plugin TEST 1 alpha 2e
+Author: Alex Esc.

@@ -1,0 +1,87 @@
+#N canvas -8 -8 1936 1040 10;
+#X msg 283 132 60;
+#X msg 319 132 61;
+#X obj 113 252 osc~;
+#X msg 375 152 read 5TET.txt;
+#X obj 262 239 print;
+#X obj 119 191 mtof~;
+#X obj 286 182 text define;
+#X obj 331 233;
+#X msg 584 84 clear;
+#X msg 591 110 read text-object-help.txt;
+#X text 841 387 creation arguments:;
+#X text 851 422 optional name;
+#X text 622 206 (optionally you can read or write to/from a file interpreting
+carriage returns as separators \; this should allow reading some text
+file formats - like this:);
+#X text 798 108 read from a file;
+#X text 802 139 write to a file;
+#X obj 603 171 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 583 514 t b p;
+#X obj 583 563 text get -s text t;
+#X msg 584 538 0;
+#X obj 583 613 print;
+#X obj 583 588 list trim;
+#X text 624 165 bang to output a pointer to a scalar (struct) containing
+the text, f 35;
+#X msg 613 297 send text-help-send;
+#X text 758 297 send pointer to a named receive object;
+#X obj 983 53 r text-help-send;
+#X obj 983 82 print;
+#X obj 762 453 print notify-outlet;
+#X text 760 481 Second outlet notifies you when text changes. As of
+Pd 0.48 this only outputs the message "updated" when text changes \,
+but this might be extended to offer more information in the future.
+, f 42;
+#X text 664 599 First outlet is pointer to a "text" scalar containing
+the text \, which is output when the object is sent a "bang". For example
+\, here's machinery for printing out first line of text., f 46;
+#X text 652 82 clear the object's state;
+#X text 849 405 optional -k flag to save contents with patch;
+#X msg 635 333 sort;
+#X text 675 334 comment;
+#X msg 451 524 60;
+#X msg 487 524 61;
+#X obj 583 423 text define -k micro-\$0;
+#A set 0.0308488 \; 0.035436 \; 0.0407053 \; 0.0467581 \; 0.0537109
+\; 0.0616977 \; 0.070872 \; 0.0814106 \; 0.0935162 \; 0.107422 \; 0.123395
+\; 0.141744 \; 0.162821 \; 0.187032 \; 0.214844 \; 0.246791 \; 0.283488
+\; 0.325642 \; 0.374065 \; 0.429688 \; 0.493581 \; 0.566976 \; 0.651285
+\; 0.748129 \; 0.859375 \; 0.987163 \; 1.13395 \; 1.30257 \; 1.49626
+\; 1.71875 \; 1.97433 \; 2.2679 \; 2.60514 \; 2.99252 \; 3.4375 \;
+3.94865 \; 4.53581 \; 5.21028 \; 5.98503 \; 6.875 \; 7.8973 \; 9.07162
+\; 10.4206 \; 11.9701 \; 13.75 \; 15.7946 \; 18.1432 \; 20.8411 \;
+23.9401 \; 27.5 \; 31.5892 \; 36.2865 \; 41.6822 \; 47.8803 \; 55 \;
+63.1784 \; 72.5729 \; 83.3644 \; 95.7606 \; 110 \; 126.357 \; 145.146
+\; 166.729 \; 191.521 \; 220 \; 252.714 \; 290.292 \; 333.458 \; 383.042
+\; 440 \; 505.427 \; 580.583 \; 666.915 \; 766.084 \; 880 \; 1010.85
+\; 1161.17 \; 1333.83 \; 1532.17 \; 1760 \; 2021.71 \; 2322.33 \; 2667.66
+\; 3064.34 \; 3520 \; 4043.42 \; 4644.67 \; 5335.32 \; 6128.68 \; 7040
+\; 8086.84 \; 9289.34 \; 10670.6 \; 12257.4 \; 14080 \; 16173.7 \;
+18578.7 \; 21341.3 \; 24514.7 \; 28160 \; 32347.3 \; 37157.3 \; 42682.6
+\; 49029.4 \; 56320 \; 64694.7 \; 74314.7 \; 85365.2 \; 98058.8 \;
+112640 \; 129389 \; 148629 \; 170730 \; 196118 \; 225280 \; 258779
+\; 297259 \; 341461 \; 392235 \; 450560 \; 517558 \; 594518 \; 682921
+\; 784470 \; 901120 \; 1.03512e+06 \; 1.18904e+06 \; 1.36584e+06 \;
+;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 3 0 6 0;
+#X connect 3 0 35 0;
+#X connect 5 0 2 0;
+#X connect 8 0 35 0;
+#X connect 9 0 35 0;
+#X connect 15 0 35 0;
+#X connect 16 0 18 0;
+#X connect 16 1 17 3;
+#X connect 17 0 20 0;
+#X connect 18 0 17 0;
+#X connect 20 0 19 0;
+#X connect 22 0 35 0;
+#X connect 24 0 25 0;
+#X connect 31 0 35 0;
+#X connect 33 0 17 0;
+#X connect 34 0 17 0;
+#X connect 35 0 16 0;
+#X connect 35 1 26 0;
